@@ -1,0 +1,5 @@
+# The legacy PHP site is a ~380MB reference archive (it vendors PHPMailer
+# and an old WordPress copy). Nothing at build time reads it — the page
+# data in content/ is generated ahead of time and checked in — so it is
+# kept out of the deployment upload.
+legacy-src
