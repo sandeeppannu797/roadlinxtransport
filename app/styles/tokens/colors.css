@@ -1,0 +1,84 @@
+/* Bawa Immigration — Color tokens
+   Palette story: a trustworthy "Harbour" navy for authority and calm,
+   a "Sunlit" gold accent for optimism and opportunity, and a quiet
+   "Eucalyptus" green nodding to Australia. Warm paper/sand neutrals keep
+   the system human rather than clinical-corporate. */
+
+:root {
+  /* ---- Brand: Harbour navy ---- */
+  --navy-50:  #EEF4F9;
+  --navy-100: #D7E5F0;
+  --navy-200: #AEC8DD;
+  --navy-300: #7AA2C2;
+  --navy-400: #427CA1;
+  --navy-500: #1E5C86;
+  --navy-600: #15466B;  /* primary brand */
+  --navy-700: #103452;
+  --navy-800: #0B2640;
+  --navy-900: #081B2E;
+
+  /* ---- Accent: Sunlit gold ---- */
+  --gold-50:  #FDF8EC;
+  --gold-100: #FAEFD2;
+  --gold-200: #F4DCA1;
+  --gold-300: #EEC76C;
+  --gold-400: #E7B248;
+  --gold-500: #DDA02F;  /* accent */
+  --gold-600: #C0841F;
+  --gold-700: #97651A;
+
+  /* ---- Eucalyptus (secondary / success) ---- */
+  --euc-50:   #E8F2EE;
+  --euc-100:  #CDE5DD;
+  --euc-500:  #3B8A74;
+  --euc-600:  #2E7059;
+  --euc-700:  #234F3F;
+
+  /* ---- Warm neutrals ---- */
+  --paper:    #FCFAF5;  /* page background */
+  --sand-50:  #F6F1E7;
+  --sand-100: #EDE5D4;
+  --sand-200: #E1D7C1;
+  --white:    #FFFFFF;
+
+  --ink-900:  #15202E;  /* headings */
+  --ink-700:  #2C3A4B;
+  --ink-600:  #45525F;
+  --ink-500:  #5E6B79;  /* body muted */
+  --ink-400:  #8A95A1;
+  --ink-300:  #B4BCC5;
+  --line:     #E6DFCF;  /* warm hairline borders */
+  --line-cool:#E2E8EE;
+
+  /* ---- Semantic aliases ---- */
+  --color-primary:        var(--navy-600);
+  --color-primary-hover:  var(--navy-700);
+  --color-primary-active: var(--navy-800);
+  --color-accent:         var(--gold-500);
+  --color-accent-hover:   var(--gold-600);
+
+  --text-heading:  var(--ink-900);
+  --text-body:     var(--ink-700);
+  --text-muted:    var(--ink-500);
+  --text-on-navy:  #EAF1F7;
+  --text-on-navy-muted: #A9C0D3;
+  --text-link:     var(--navy-600);
+
+  --surface-page:    var(--paper);
+  --surface-card:    var(--white);
+  --surface-sunken:  var(--sand-50);
+  --surface-navy:    var(--navy-700);
+  --surface-navy-deep: var(--navy-900);
+  --surface-gold-soft: var(--gold-50);
+
+  --border-card:   var(--line);
+  --border-input:  #D6CDBA;
+  --border-strong: var(--ink-300);
+
+  --color-success: var(--euc-600);
+  --color-warning: var(--gold-600);
+  --color-danger:  #C0492F;
+  --color-info:    var(--navy-500);
+
+  --focus-ring: 0 0 0 3px rgba(221, 160, 47, 0.45);
+}

@@ -1,0 +1,8 @@
+/* Bawa Immigration — Webfonts
+   Display serif: Spectral (trust, gravitas, editorial authority)
+   Body sans:     Hanken Grotesk (modern, warm, highly legible)
+   Mono/figures:  Spline Sans Mono (visa subclass numbers, codes)
+   Loaded from Google Fonts. If self-hosting is required, drop the .woff2
+   files into /assets/fonts and swap these @import lines for @font-face. */
+
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Spline+Sans+Mono:wght@400;500;600&display=swap');

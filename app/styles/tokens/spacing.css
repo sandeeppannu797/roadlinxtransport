@@ -1,0 +1,45 @@
+/* Bawa Immigration — Spacing, radius, shadow, layout tokens */
+
+:root {
+  /* Spacing scale (4px base) */
+  --space-0: 0;
+  --space-1: 0.25rem;  /* 4 */
+  --space-2: 0.5rem;   /* 8 */
+  --space-3: 0.75rem;  /* 12 */
+  --space-4: 1rem;     /* 16 */
+  --space-5: 1.5rem;   /* 24 */
+  --space-6: 2rem;     /* 32 */
+  --space-7: 2.5rem;   /* 40 */
+  --space-8: 3rem;     /* 48 */
+  --space-9: 4rem;     /* 64 */
+  --space-10: 5rem;    /* 80 */
+  --space-11: 6.5rem;  /* 104 */
+
+  /* Radius — soft, confident, not pill-everything */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+
+  /* Shadows — warm-tinted, layered, restrained */
+  --shadow-xs: 0 1px 2px rgba(21, 32, 46, 0.06);
+  --shadow-sm: 0 1px 3px rgba(21, 32, 46, 0.08), 0 1px 2px rgba(21, 32, 46, 0.04);
+  --shadow-md: 0 6px 16px -6px rgba(21, 38, 64, 0.16), 0 2px 6px -2px rgba(21, 38, 64, 0.08);
+  --shadow-lg: 0 18px 40px -16px rgba(11, 38, 64, 0.24), 0 6px 14px -8px rgba(11, 38, 64, 0.12);
+  --shadow-gold: 0 10px 26px -10px rgba(192, 132, 31, 0.5);
+  --shadow-navy: 0 16px 40px -14px rgba(8, 27, 46, 0.45);
+
+  /* Layout */
+  --container-max: 1200px;
+  --container-narrow: 760px;
+  --gutter: var(--space-6);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);   /* @kind other */
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1); /* @kind other */
+  --dur-fast: 140ms;  /* @kind other */
+  --dur-base: 240ms;  /* @kind other */
+  --dur-slow: 420ms;  /* @kind other */
+}
