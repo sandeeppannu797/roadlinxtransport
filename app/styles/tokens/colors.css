@@ -1,8 +1,6 @@
-/* Bawa Immigration — Color tokens
-   Palette story: a trustworthy "Harbour" navy for authority and calm,
-   a "Sunlit" gold accent for optimism and opportunity, and a quiet
-   "Eucalyptus" green nodding to Australia. Warm paper/sand neutrals keep
-   the system human rather than clinical-corporate. */
+/* Road Linx — base colour tokens: navy, a green used for success states,
+   and warm paper/sand neutrals. roadlinx.css re-themes the navy to the logo
+   and swaps the gold accent for the logo orange. */
 
 :root {
   /* ---- Brand: Harbour navy ---- */
