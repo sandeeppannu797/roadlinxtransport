@@ -1,9 +1,9 @@
-/* Bawa Immigration — Typography tokens */
+/* Road Linx — typography tokens. The font files are self-hosted by next/font (app/layout.tsx). */
 
 :root {
-  --font-display: 'Spectral', Georgia, 'Times New Roman', serif;
-  --font-sans: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-mono: 'Spline Sans Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  --font-display: var(--font-spectral), Georgia, 'Times New Roman', serif;
+  --font-sans: var(--font-hanken), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: var(--font-spline-mono), ui-monospace, 'SF Mono', Menlo, monospace;
 
   /* Weights */
   --fw-regular: 400;   /* @kind font */

@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Hanken_Grotesk, Spectral, Spline_Sans_Mono } from "next/font/google";
 import Script from "next/script";
 import "./styles/roadlinx.css";
 import { Header } from "@/components/Header";
@@ -7,6 +8,11 @@ import { SiteBehaviors } from "@/components/SiteBehaviors";
 import { GA_ID, ORG_JSONLD, SITE_URL } from "@/lib/site";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+
+/* Self-hosted at build time; the CSS reads them through app/styles/tokens/typography.css. */
+const spectral = Spectral({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-spectral" });
+const hanken = Hanken_Grotesk({ subsets: ["latin"], variable: "--font-hanken" });
+const splineMono = Spline_Sans_Mono({ subsets: ["latin"], variable: "--font-spline-mono" });
 
 /*
  * Site-wide head values. Robots is deliberately not set here: pageMetadata()
@@ -32,11 +38,8 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en-AU">
+    <html lang="en-AU" className={`${spectral.variable} ${hanken.variable} ${splineMono.variable}`}>
       <body>
-        {/* Font preconnects, as in legacy head.php (fonts load via tokens/fonts.css). */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* Site-wide Organization / LocalBusiness knowledge graph (verbatim). */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ORG_JSONLD }} />
         <Header />
