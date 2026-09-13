@@ -1,34 +1,36 @@
-import type { Metadata, Viewport } from 'next';
-import Script from 'next/script';
-import './styles/roadlinx.css';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { SiteBehaviors } from '@/components/SiteBehaviors';
-import { GA_ID, ORG_JSONLD, SITE_URL } from '@/lib/site';
+import type { Metadata, Viewport } from "next";
+import Script from "next/script";
+import "./styles/roadlinx.css";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { SiteBehaviors } from "@/components/SiteBehaviors";
+import { GA_ID, ORG_JSONLD, SITE_URL } from "@/lib/site";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 /* Site-wide head values, ported from legacy partials/head.php. */
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  robots: { index: true, follow: true, 'max-image-preview': 'large' },
-  authors: [{ name: 'Road Linx Transport' }],
+  robots: { index: true, follow: true, "max-image-preview": "large" },
+  authors: [{ name: "Road Linx Transport" }],
   formatDetection: { telephone: false },
-  verification: { google: 'dMSRXvB9T16IeUh6aqKlybhi-aeGqoH79pWZy9n77pM' },
-  openGraph: { siteName: 'Road Linx Transport', type: 'website', locale: 'en_AU' },
-  twitter: { card: 'summary_large_image' },
+  verification: { google: "dMSRXvB9T16IeUh6aqKlybhi-aeGqoH79pWZy9n77pM" },
+  openGraph: { siteName: "Road Linx Transport", type: "website", locale: "en_AU" },
+  twitter: { card: "summary_large_image" },
   icons: {
-    icon: { url: '/assets/img/roadlinx-logo.png', type: 'image/png' },
-    apple: '/assets/img/roadlinx-logo.png',
+    icon: { url: "/assets/img/roadlinx-logo.png", type: "image/png" },
+    apple: "/assets/img/roadlinx-logo.png",
   },
-  other: { 'geo.region': 'AU-QLD', 'geo.placename': 'Brisbane' },
+  other: { "geo.region": "AU-QLD", "geo.placename": "Brisbane" },
 };
 
 export const viewport: Viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
-  themeColor: '#1F3B57',
+  themeColor: "#1F3B57",
 };
 
-export default function RootLayout({ children }: LayoutProps<'/'>) {
+export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en-AU">
       <body>
@@ -40,6 +42,8 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
         <Header />
         {children}
         <Footer />
+        <Analytics />
+        <SpeedInsights />
         <SiteBehaviors />
         {/* Google tag (gtag.js) */}
         <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
