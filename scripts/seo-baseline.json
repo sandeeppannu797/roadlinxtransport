@@ -55,6 +55,7 @@
       "/blog",
       "/contact",
       "/fleet",
+      "/fleet/truck-finder",
       "/industries",
       "/locations",
       "/locations/brisbane",
@@ -1875,6 +1876,58 @@
                 "@type": "Answer",
                 "text": "Yes. As an NHVR-compliant operator we maintain our vehicles to standard, and our load-rated restraint gear is part of that. With hired trailers, the maintenance and compliance stay our responsibility, not yours."
               }
+            }
+          ]
+        }
+      ],
+      "links": []
+    },
+    "/fleet/truck-finder": {
+      "title": "Which Truck Do I Need? Truck Size Finder | Road Linx",
+      "description": "Answer a few quick questions about your freight and see which truck suits it, from a one-tonne ute to a 24-pallet semi. Then get a quote in one click.",
+      "keywords": "which truck do i need, truck size guide, what size truck do i need, truck hire brisbane, pallet truck sizes",
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "canonical": [
+        "https://roadlinxtransport.com.au/fleet/truck-finder"
+      ],
+      "ogTitle": "Which Truck Do I Need? Truck Size Finder | Road Linx",
+      "ogDescription": "Answer a few quick questions about your freight and see which truck suits it, from a one-tonne ute to a 24-pallet semi. Then get a quote in one click.",
+      "ogUrl": "https://roadlinxtransport.com.au/fleet/truck-finder",
+      "ogImage": "https://roadlinxtransport.com.au/assets/img/roadlinx-logo.png",
+      "ogSiteName": "Road Linx Transport",
+      "ogType": "website",
+      "ogLocale": "en_AU",
+      "twitterCard": "summary_large_image",
+      "twitterTitle": "Which Truck Do I Need? Truck Size Finder | Road Linx",
+      "twitterDescription": "Answer a few quick questions about your freight and see which truck suits it, from a one-tonne ute to a 24-pallet semi. Then get a quote in one click.",
+      "twitterImage": "https://roadlinxtransport.com.au/assets/img/roadlinx-logo.png",
+      "h1": [
+        "Which truck do I need?"
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://roadlinxtransport.com.au/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Fleet",
+              "item": "https://roadlinxtransport.com.au/fleet"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Truck finder",
+              "item": "https://roadlinxtransport.com.au/fleet/truck-finder"
             }
           ]
         }

@@ -31,6 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     staticPages['blog-index'].head,
     staticPages.about.head,
     staticPages.fleet.head,
+    staticPages['truck-finder'].head,
     staticPages.industries.head,
     staticPages['privacy-compliance'].head,
     staticPages.quote.head,

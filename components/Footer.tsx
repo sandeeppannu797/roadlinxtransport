@@ -25,6 +25,7 @@ const footerLocations = [
 const footerCompany = [
   { href: '/about', label: 'About' },
   { href: '/fleet', label: 'Fleet' },
+  { href: '/fleet/truck-finder', label: 'Truck finder' },
   { href: '/industries', label: 'Industries' },
   { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contact' },

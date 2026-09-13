@@ -21,7 +21,7 @@ Page content is data in `content/`, edited directly:
 | `content/locations.ts` | the 15 location landing pages |
 | `content/services.ts` | the 15 service landing pages |
 | `content/blog.ts` | the 10 blog posts |
-| `content/pages.ts` | home, about, fleet, industries, privacy & compliance, the three hub pages, and the head tags for quote and contact |
+| `content/pages.ts` | home, about, fleet, industries, privacy & compliance, the three hub pages, and the head tags for quote, contact and the truck finder |
 
 Prose and FAQ answers are HTML strings. All 40 landing pages render through
 one component, `components/LandingTemplate.tsx`, which also builds each page's

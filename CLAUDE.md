@@ -59,9 +59,9 @@ org-schema change is one hunk.
   `dynamicParams = false`, so an unknown slug 404s.
 - `content/pages.ts` — home, about, fleet, industries, privacy-compliance and
   the three hub indexes, whose `<main>` HTML `components/StaticPage.tsx`
-  renders whole. It also holds the head values for `/quote` and `/contact`;
-  their bodies are JSX in `app/quote` and `app/contact`, and their `mainHtml`
-  is empty.
+  renders whole. It also holds the head values for `/quote`, `/contact` and
+  `/fleet/truck-finder`; their bodies are JSX in `app/`, and their
+  `mainHtml` is empty.
 - Prose and FAQ answers are raw HTML rendered with `dangerouslySetInnerHTML`.
 - Landing-page FAQPage JSON-LD is generated from `faq.items` by
   LandingTemplate. Don't add FAQPage blocks to a landing page's `head.jsonLd`.
@@ -133,6 +133,12 @@ checks in `verify-seo.mjs`.
   instead of throwing; `sendMail` rethrows. A hidden honeypot field
   (`website`) catches bots: `isBot()` gives them a fake success and sends
   nothing.
+- `/fleet/truck-finder` (`app/fleet/truck-finder/`) suggests a vehicle from
+  a few answers. Its sizing rules follow the Fleet and service copy, except
+  `RIGID_MAX_PALLETS` (12, typical for a 12-tonne rigid), which the business
+  has not confirmed. "Get a quote for this" links to
+  `/quote?service=…&load=…`, and `QuoteForm` fills those fields from the
+  query on the client; `service` must match one of its options.
 - `/sitemap.xml` and `/robots.txt` are generated from the content collections
   and filter out `noindex` pages (49 of 50 URLs).
 - Security headers are set in `next.config.ts` `headers()`. There is no CSP:

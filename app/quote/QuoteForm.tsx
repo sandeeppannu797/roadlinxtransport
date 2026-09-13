@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useActionState } from 'react';
+import { useActionState, useEffect } from 'react';
 import { submitQuote } from './actions';
 import { EMPTY_FORM_STATE, HONEYPOT_FIELD } from '@/lib/formState';
 import { FormError, FormSuccess, SubmitButton, useSuccessPanel } from '@/components/FormFeedback';
@@ -32,6 +32,18 @@ export function QuoteForm() {
   const [state, formAction] = useActionState(submitQuote, EMPTY_FORM_STATE);
   const { showSuccess, formRef, sendAnother } = useSuccessPanel(state);
   const kept = (name: string) => state.values?.[name] ?? '';
+
+  // The truck finder links here as /quote?service=…&load=…. The page is
+  // static, so the query is read on the client and written into the fields.
+  useEffect(() => {
+    const form = formRef.current;
+    if (!form) return;
+    const params = new URLSearchParams(window.location.search);
+    const service = params.get('service');
+    const load = params.get('load');
+    if (service && serviceOptions.includes(service)) (form.elements.namedItem('service') as HTMLSelectElement).value = service;
+    if (load) (form.elements.namedItem('load') as HTMLInputElement).value = load.slice(0, 200);
+  }, [formRef]);
 
   if (showSuccess) {
     return (
