@@ -17,10 +17,6 @@ export const metadata: Metadata = {
   verification: { google: "dMSRXvB9T16IeUh6aqKlybhi-aeGqoH79pWZy9n77pM" },
   openGraph: { siteName: "Road Linx Transport", type: "website", locale: "en_AU" },
   twitter: { card: "summary_large_image" },
-  icons: {
-    icon: { url: "/assets/img/roadlinx-logo.png", type: "image/png" },
-    apple: "/assets/img/roadlinx-logo.png",
-  },
   other: { "geo.region": "AU-QLD", "geo.placename": "Brisbane" },
 };
 
