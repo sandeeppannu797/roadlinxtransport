@@ -38,8 +38,13 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en-AU" className={`${spectral.variable} ${hanken.variable} ${splineMono.variable}`}>
+    // data-scroll-behavior lets Next turn smooth scrolling off during route
+    // changes, so a new page starts at the top instead of gliding there.
+    <html lang="en-AU" data-scroll-behavior="smooth" className={`${spectral.variable} ${hanken.variable} ${splineMono.variable}`}>
       <body>
+        <a className="skip-link" href="#main">Skip to content</a>
+        {/* Reveal-on-scroll sections start hidden and are shown by SiteBehaviors; without JS, show them. */}
+        <noscript><style>{`.reveal{opacity:1;transform:none}`}</style></noscript>
         {/* Site-wide Organization / LocalBusiness knowledge graph (verbatim). */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ORG_JSONLD }} />
         <Header />
