@@ -1,5 +1,6 @@
 'use server';
 
+import { contactEmailHtml } from '@/lib/emailTemplates';
 import { sendMail } from '@/lib/mailer';
 import {
   ERR_EMAIL, ERR_REQUIRED, ERR_SEND, field, isValidEmail, type FormState,
@@ -42,6 +43,7 @@ ${message}
     await sendMail({
       subject: '💥 New Contact Form Enquiry - Road Linx Transport',
       text,
+      html: contactEmailHtml(values),
       replyTo: email,
     });
   } catch (err) {

@@ -1,5 +1,6 @@
 'use server';
 
+import { quoteEmailHtml } from '@/lib/emailTemplates';
 import { sendMail } from '@/lib/mailer';
 import {
   ERR_EMAIL, ERR_REQUIRED, ERR_SEND, field, isValidEmail, type FormState,
@@ -60,6 +61,7 @@ ${notes}
     await sendMail({
       subject: '💥 New Freight Quote Request - Road Linx Transport',
       text,
+      html: quoteEmailHtml(values),
       replyTo: email,
     });
   } catch (err) {

@@ -3,8 +3,9 @@ import { Resend } from 'resend';
 
 /*
  * Replaces the legacy PHP mail() calls in quote.php and contact.php.
- * Subjects and body layout are unchanged from the legacy site. Two things
- * deliberately are not:
+ * Subjects and the plain-text body are unchanged from the legacy site; an
+ * HTML version (lib/emailTemplates.ts) goes out alongside it. Two things
+ * deliberately differ:
  *
  * - Recipient. Legacy sent to info@, which does not exist in the business's
  *   Microsoft 365 tenant, so Exchange would reject every submission.
@@ -26,7 +27,7 @@ function requireEnv(name: string): string {
   return value;
 }
 
-export async function sendMail(opts: { subject: string; text: string; replyTo: string }) {
+export async function sendMail(opts: { subject: string; text: string; html?: string; replyTo: string }) {
   const resend = new Resend(requireEnv('RESEND_API_KEY'));
 
   // The SDK reports API failures in `error` rather than throwing. Throw here
@@ -37,6 +38,7 @@ export async function sendMail(opts: { subject: string; text: string; replyTo: s
     replyTo: headerSafe(opts.replyTo),
     subject: opts.subject,
     text: opts.text,
+    html: opts.html,
   });
   if (error) throw new Error(`Resend rejected the message: ${error.name} — ${error.message}`);
 }
