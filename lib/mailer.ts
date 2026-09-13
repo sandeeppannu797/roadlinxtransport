@@ -3,9 +3,9 @@ import { Resend } from 'resend';
 
 /*
  * Replaces the legacy PHP mail() calls in quote.php and contact.php.
- * Subjects and the plain-text body are unchanged from the legacy site; an
- * HTML version (lib/emailTemplates.ts) goes out alongside it. Two things
- * deliberately differ:
+ * The plain-text body is unchanged from the legacy site; an HTML version
+ * (lib/emailTemplates.ts) goes out alongside it. The subjects lead with 🚚
+ * rather than legacy's 💥, and two more things deliberately differ:
  *
  * - Recipient. Legacy sent to info@, which does not exist in the business's
  *   Microsoft 365 tenant, so Exchange would reject every submission.

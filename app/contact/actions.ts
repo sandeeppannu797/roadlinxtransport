@@ -1,31 +1,29 @@
-'use server';
+"use server";
 
-import { contactEmailHtml } from '@/lib/emailTemplates';
-import { sendMail } from '@/lib/mailer';
-import {
-  ERR_EMAIL, ERR_REQUIRED, ERR_SEND, field, isBot, isValidEmail, type FormState,
-} from '@/lib/formState';
+import { contactEmailHtml } from "@/lib/emailTemplates";
+import { sendMail } from "@/lib/mailer";
+import { ERR_EMAIL, ERR_REQUIRED, ERR_SEND, field, isBot, isValidEmail, type FormState } from "@/lib/formState";
 
-const SUCCESS = 'Thank you! Your message has been sent successfully.';
+const SUCCESS = "Thank you! Your message has been sent successfully.";
 
 /* Port of the contact.php handler: name/email/message required (phone
- * optional), same subject and body layout, same user-facing messages. */
+ * optional), same body layout, same user-facing messages. */
 export async function submitContact(_prev: FormState, data: FormData): Promise<FormState> {
   // Bots get the normal success message, so they have nothing to adapt to.
-  if (isBot(data)) return { error: '', success: SUCCESS };
+  if (isBot(data)) return { error: "", success: SUCCESS };
 
-  const name = field(data, 'name');
-  const phone = field(data, 'phone');
-  const email = field(data, 'email');
-  const message = field(data, 'message');
+  const name = field(data, "name");
+  const phone = field(data, "phone");
+  const email = field(data, "email");
+  const message = field(data, "message");
 
   const values = { name, phone, email, message };
 
   if (!name || !email || !message) {
-    return { error: ERR_REQUIRED, success: '', values };
+    return { error: ERR_REQUIRED, success: "", values };
   }
   if (!isValidEmail(email)) {
-    return { error: ERR_EMAIL, success: '', values };
+    return { error: ERR_EMAIL, success: "", values };
   }
 
   const text = `
@@ -46,15 +44,15 @@ ${message}
 
   try {
     await sendMail({
-      subject: '💥 New Contact Form Enquiry - Road Linx Transport',
+      subject: "🚚 New Contact Form Enquiry - Road Linx Transport",
       text,
       html: contactEmailHtml(values),
       replyTo: email,
     });
   } catch (err) {
-    console.error('contact form send failed', err);
-    return { error: ERR_SEND, success: '', values };
+    console.error("contact form send failed", err);
+    return { error: ERR_SEND, success: "", values };
   }
 
-  return { error: '', success: SUCCESS, sentTo: email };
+  return { error: "", success: SUCCESS, sentTo: email };
 }

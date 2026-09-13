@@ -122,7 +122,7 @@ checks in `verify-seo.mjs`.
   `SiteBehaviors.tsx` (FAQ accordion via delegation so it reaches inside HTML
   blobs, reveal-on-scroll), `FooterYear.tsx`.
 - Forms are server actions plus Resend (`app/quote`, `app/contact`,
-  `lib/mailer.ts`), with the legacy subjects and plain-text body plus an HTML
+  `lib/mailer.ts`), with the legacy plain-text body, subjects led by 🚚, plus an HTML
   version from `lib/emailTemplates.ts` (table layout, inline styles, all
   submitted values escaped). The recipient (`admin@`, not legacy `info@`) and
   sender (`noreply@mail.` subdomain) are deliberate: `info@` does not exist in
