@@ -58,7 +58,9 @@ pnpm verify
 
 `/quote` and `/contact` post to server actions (`app/*/actions.ts`) that send
 mail through [Resend](https://resend.com) via `lib/mailer.ts`, replacing the
-legacy `mail()` calls. Subjects and body layout are unchanged. Both forms send
+legacy `mail()` calls. Subjects and the plain-text body are unchanged; each
+email also carries a branded HTML version built in `lib/emailTemplates.ts`,
+which escapes every submitted value. Both forms send
 to `admin@roadlinxtransport.com.au` from
 `noreply@mail.roadlinxtransport.com.au`, with the submitter as Reply-To.
 

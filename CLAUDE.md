@@ -131,8 +131,10 @@ og:url pointing at `/policies-compliance`, a URL that has never existed.
 - `ORG_JSONLD` in `lib/site.ts` is byte-for-byte from legacy `head.php` and is
   on every page; verify compares it too.
 - Forms are server actions plus Resend (`app/quote`, `app/contact`,
-  `lib/mailer.ts`), with the same subjects and body layout as the legacy
-  `mail()` calls. The recipient (`admin@`, not legacy `info@`) and sender
+  `lib/mailer.ts`), with the same subjects and plain-text body as the legacy
+  `mail()` calls, plus an HTML version from `lib/emailTemplates.ts` (table
+  layout, inline styles, all submitted values escaped). The recipient
+  (`admin@`, not legacy `info@`) and sender
   (`noreply@mail.` subdomain) differ from legacy on purpose: `info@` does not
   exist in the Microsoft 365 tenant, and M365 has SMTP AUTH off. Don't revert
   them to match legacy. `RESEND_API_KEY` comes from env — see `.env.example`.
