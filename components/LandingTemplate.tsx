@@ -1,7 +1,6 @@
 /*
  * The one template behind all 40 landing pages (15 locations, 15 services,
- * 10 blog posts). Markup is ported verbatim from the legacy PHP templates;
- * everything that varies between pages comes in via the extracted
+ * 10 blog posts). Everything that varies between pages comes in via the
  * LandingPage record. Locations/services render prose + quote sidebar;
  * blog posts render a full-width article and no sidebar.
  */
@@ -13,16 +12,16 @@ import { QuoteSidebar } from './QuoteSidebar';
 export type LandingVariant = 'location' | 'service' | 'blog';
 
 const sidebarOverline: Record<string, string> = {
-  location: 'Local freight', // legacy location-side-bar.php
-  service: 'Get moving',     // legacy service-side-bar.php
+  location: 'Local freight',
+  service: 'Get moving',
 };
 
 const PlusIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
 );
 
 const ArrowRight = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
 );
 
 function toStyle(style: string | null): React.CSSProperties | undefined {
@@ -39,6 +38,22 @@ function toStyle(style: string | null): React.CSSProperties | undefined {
   return out;
 }
 
+/**
+ * FAQPage JSON-LD built from the visible FAQ, so the two can't disagree.
+ * "<" is escaped so answer HTML can never close the <script> tag early.
+ */
+function faqJsonLd(items: LandingPage['faq']['items']): string {
+  return JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.a },
+    })),
+  }).replace(/</g, '\\u003c');
+}
+
 function HeroAction({ label, href }: { label: string; href: string }) {
   if (href.startsWith('tel:')) {
     return <a className="btn btn-onnavy-ghost btn-lg" href={href}>{label}</a>;
@@ -50,7 +65,7 @@ export function LandingTemplate({ page, variant }: { page: LandingPage; variant:
   const { hero, faq, related, cta } = page;
   return (
     <>
-      <JsonLd blocks={page.head.jsonLd} />
+      <JsonLd blocks={[...page.head.jsonLd, faqJsonLd(faq.items)]} />
       <main id="main">
         <section className="page-hero has-media">
           <div className="container">

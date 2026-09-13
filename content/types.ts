@@ -14,7 +14,11 @@ export interface PageHead {
   twitterTitle: string | null;
   twitterDescription: string | null;
   twitterImage: string | null;
-  /** Raw JSON-LD blocks, byte-for-byte from the legacy <head>. */
+  /**
+   * Raw JSON-LD blocks for the page. Landing pages leave FAQPage out:
+   * LandingTemplate builds it from `faq.items`, so it always matches the
+   * visible FAQ.
+   */
   jsonLd: string[];
 }
 
