@@ -55,6 +55,9 @@
 body { overflow-x: hidden; }
 img { max-width: 100%; display: block; }
 
+/* Visually hidden, still read by screen readers. */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
 /* Skip link: off-screen until focused by keyboard. */
 .skip-link {
   position: absolute; left: var(--space-4); top: -100px; z-index: 300;
@@ -256,7 +259,25 @@ img { max-width: 100%; display: block; }
   border-radius: var(--radius-md); box-shadow: var(--shadow-lg); padding: var(--space-4) var(--space-5);
   display: flex; align-items: center; gap: var(--space-4);
 }
-.hero-card .hc-num { font-family: var(--font-mono); font-weight: var(--fw-semibold); font-size: 1.9rem; color: var(--navy-600); line-height: 1; }
+.hero-card .hc-num { display: inline-flex; align-items: flex-start; gap: 2px; font-family: var(--font-sans); font-weight: var(--fw-extrabold); font-size: 2.1rem; letter-spacing: -0.03em; color: var(--navy-600); line-height: 1; }
+.hero-card .hc-star { color: var(--orange-500); font-size: 1.05rem; margin-top: 0.1em; letter-spacing: 0; }
+.hero-card .hc-label strong { color: var(--ink-900); }
+/* Place name cycling Brisbane → SE QLD → Northern NSW. The three names share
+   one grid cell, so the card keeps the width of the longest and never jumps.
+   The -0.45s delay starts the first name already faded in. */
+.hc-rotate { display: inline-grid; }
+.hc-rotate > span { grid-area: 1 / 1; color: var(--color-accent-text); opacity: 0; animation: hc-cycle 9s var(--ease-out) infinite both; animation-delay: -0.45s; }
+.hc-rotate > span:nth-child(2) { animation-delay: 2.55s; }
+.hc-rotate > span:nth-child(3) { animation-delay: 5.55s; }
+@keyframes hc-cycle {
+  0% { opacity: 0; transform: translateY(0.45em); }
+  5%, 30% { opacity: 1; transform: none; }
+  35%, 100% { opacity: 0; transform: translateY(-0.45em); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hc-rotate > span { animation: none; }
+  .hc-rotate > span:first-child { opacity: 1; }
+}
 .hero-card .hc-label { font-size: var(--fs-caption); color: var(--text-muted); line-height: 1.35; }
 
 /* Image placeholder tile (until real photography is supplied) */
