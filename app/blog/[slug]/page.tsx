@@ -12,7 +12,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps<'/blog/[slug]'>) {
   const { slug } = await params;
   const page = blogPosts.find((p) => p.slug === slug);
-  return page ? pageMetadata(page.head) : {};
+  return page ? pageMetadata(page.head, page.article) : {};
 }
 
 export default async function BlogPost({ params }: PageProps<'/blog/[slug]'>) {

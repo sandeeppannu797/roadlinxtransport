@@ -423,6 +423,7 @@ a.service-card:hover .more svg { transform: translateX(3px); }
 .breadcrumbs .sep { opacity: 0.5; }
 .page-hero h1 { color: #fff; font-size: clamp(2rem, 4.2vw, var(--fs-h1)); max-width: 780px; }
 .page-hero .ph-lead { color: var(--text-on-navy); opacity: 0.9; font-size: var(--fs-lead); margin-top: var(--space-4); max-width: 680px; line-height: var(--lh-relaxed); }
+.page-hero .ph-meta { color: var(--text-on-navy-muted); font-size: var(--fs-small); margin-top: var(--space-3); margin-bottom: 0; }
 .page-hero .ph-actions { margin-top: var(--space-6); display: flex; gap: var(--space-3); flex-wrap: wrap; }
 .page-hero.has-media .container { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-8); align-items: center; }
 .page-hero .ph-media { position: relative; border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 4/3.1; border: 1px solid rgba(255,255,255,0.12); box-shadow: var(--shadow-navy); }

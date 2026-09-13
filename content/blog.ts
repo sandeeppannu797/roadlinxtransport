@@ -20,7 +20,7 @@ export const blogPosts: LandingPage[] = [
       "twitterDescription": null,
       "twitterImage": null,
       "jsonLd": [
-        "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"22 vs 24 Pallet Trailers: Which Semi Suits Your Load?\",\"description\":\"22 vs 24 pallet trailers explained: how many pallets fit, when weight matters more than floor space, and how to pick the right semi. Road Linx Transport.\",\"author\":{\"@type\":\"Organization\",\"name\":\"Road Linx Transport\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Road Linx Transport\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://roadlinxtransport.com.au/assets/img/roadlinx-logo.png\"}},\"mainEntityOfPage\":\"https://roadlinxtransport.com.au/blog/22-vs-24-pallet-trailer\"}"
+        "\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"22 vs 24 Pallet Trailers: Which Semi Suits Your Load?\",\n  \"description\": \"22 vs 24 pallet trailers explained: how many pallets fit, when weight matters more than floor space, and how to pick the right semi. Road Linx Transport.\",\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Road Linx Transport\",\n    \"url\": \"https://roadlinxtransport.com.au/\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Road Linx Transport\",\n    \"logo\": {\n      \"@type\": \"ImageObject\",\n      \"url\": \"https://roadlinxtransport.com.au/assets/img/roadlinx-logo.png\"\n    }\n  },\n  \"mainEntityOfPage\": \"https://roadlinxtransport.com.au/blog/22-vs-24-pallet-trailer\",\n  \"image\": \"https://roadlinxtransport.com.au/assets/img/blog-img6.webp\",\n  \"datePublished\": \"2026-06-09\",\n  \"dateModified\": \"2026-06-09\"\n}\n"
       ]
     },
     "hero": {
@@ -120,6 +120,11 @@ export const blogPosts: LandingPage[] = [
     "cta": {
       "heading": "Got a freight job in mind?",
       "text": "Tell us what you are moving and we will give you a straight price."
+    },
+    "article": {
+      "published": "2026-06-09",
+      "readMinutes": 6,
+      "category": "Equipment"
     }
   },
   {
@@ -138,7 +143,7 @@ export const blogPosts: LandingPage[] = [
       "twitterDescription": null,
       "twitterImage": null,
       "jsonLd": [
-        "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Chain of Responsibility (COR) Explained for Shippers\",\"description\":\"A plain-English guide to Chain of Responsibility (COR) for businesses that send freight: what it is, who it covers and how to stay compliant. Road Linx Transport.\",\"author\":{\"@type\":\"Organization\",\"name\":\"Road Linx Transport\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Road Linx Transport\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://roadlinxtransport.com.au/assets/img/roadlinx-logo.png\"}},\"mainEntityOfPage\":\"https://roadlinxtransport.com.au/blog/chain-of-responsibility-explained\"}"
+        "\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"Chain of Responsibility (COR) Explained for Shippers\",\n  \"description\": \"A plain-English guide to Chain of Responsibility (COR) for businesses that send freight: what it is, who it covers and how to stay compliant. Road Linx Transport.\",\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Road Linx Transport\",\n    \"url\": \"https://roadlinxtransport.com.au/\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Road Linx Transport\",\n    \"logo\": {\n      \"@type\": \"ImageObject\",\n      \"url\": \"https://roadlinxtransport.com.au/assets/img/roadlinx-logo.png\"\n    }\n  },\n  \"mainEntityOfPage\": \"https://roadlinxtransport.com.au/blog/chain-of-responsibility-explained\",\n  \"image\": \"https://roadlinxtransport.com.au/assets/img/blog-img3.webp\",\n  \"datePublished\": \"2026-05-19\",\n  \"dateModified\": \"2026-05-19\"\n}\n"
       ]
     },
     "hero": {
@@ -238,6 +243,11 @@ export const blogPosts: LandingPage[] = [
     "cta": {
       "heading": "Got a freight job in mind?",
       "text": "Tell us what you are moving and we will give you a straight price."
+    },
+    "article": {
+      "published": "2026-05-19",
+      "readMinutes": 8,
+      "category": "Compliance"
     }
   },
   {
@@ -256,7 +266,7 @@ export const blogPosts: LandingPage[] = [
       "twitterDescription": null,
       "twitterImage": null,
       "jsonLd": [
-        "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"FTL vs LTL: Choosing Full Truck Load Freight\",\"description\":\"FTL vs LTL explained: what full truck load and part load freight mean, the pros and cons of each, and how to pick the right one. From Road Linx Transport.\",\"author\":{\"@type\":\"Organization\",\"name\":\"Road Linx Transport\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Road Linx Transport\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://roadlinxtransport.com.au/assets/img/roadlinx-logo.png\"}},\"mainEntityOfPage\":\"https://roadlinxtransport.com.au/blog/ftl-vs-ltl\"}"
+        "\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"FTL vs LTL: Choosing Full Truck Load Freight\",\n  \"description\": \"FTL vs LTL explained: what full truck load and part load freight mean, the pros and cons of each, and how to pick the right one. From Road Linx Transport.\",\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Road Linx Transport\",\n    \"url\": \"https://roadlinxtransport.com.au/\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Road Linx Transport\",\n    \"logo\": {\n      \"@type\": \"ImageObject\",\n      \"url\": \"https://roadlinxtransport.com.au/assets/img/roadlinx-logo.png\"\n    }\n  },\n  \"mainEntityOfPage\": \"https://roadlinxtransport.com.au/blog/ftl-vs-ltl\",\n  \"image\": \"https://roadlinxtransport.com.au/assets/img/blog-img2.webp\",\n  \"datePublished\": \"2026-05-12\",\n  \"dateModified\": \"2026-05-12\"\n}\n"
       ]
     },
     "hero": {
@@ -356,6 +366,11 @@ export const blogPosts: LandingPage[] = [
     "cta": {
       "heading": "Got a freight job in mind?",
       "text": "Tell us what you are moving and we will give you a straight price."
+    },
+    "article": {
+      "published": "2026-05-12",
+      "readMinutes": 7,
+      "category": "Freight Basics"
     }
   },
   {
@@ -374,7 +389,7 @@ export const blogPosts: LandingPage[] = [
       "twitterDescription": null,
       "twitterImage": null,
       "jsonLd": [
-        "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Hot Shot Freight: Getting Urgent Deliveries Right\",\"description\":\"What hot shot freight is, when it's worth paying for, and how to get urgent deliveries right. A practical guide from Road Linx Transport in Brisbane.\",\"author\":{\"@type\":\"Organization\",\"name\":\"Road Linx Transport\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Road Linx Transport\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://roadlinxtransport.com.au/assets/img/roadlinx-logo.png\"}},\"mainEntityOfPage\":\"https://roadlinxtransport.com.au/blog/hot-shot-freight-guide\"}"
+        "\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"Hot Shot Freight: Getting Urgent Deliveries Right\",\n  \"description\": \"What hot shot freight is, when it's worth paying for, and how to get urgent deliveries right. A practical guide from Road Linx Transport in Brisbane.\",\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Road Linx Transport\",\n    \"url\": \"https://roadlinxtransport.com.au/\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Road Linx Transport\",\n    \"logo\": {\n      \"@type\": \"ImageObject\",\n      \"url\": \"https://roadlinxtransport.com.au/assets/img/roadlinx-logo.png\"\n    }\n  },\n  \"mainEntityOfPage\": \"https://roadlinxtransport.com.au/blog/hot-shot-freight-guide\",\n  \"image\": \"https://roadlinxtransport.com.au/assets/img/blog-img10.jpg\",\n  \"datePublished\": \"2026-07-07\",\n  \"dateModified\": \"2026-07-07\"\n}\n"
       ]
     },
     "hero": {
@@ -474,6 +489,11 @@ export const blogPosts: LandingPage[] = [
     "cta": {
       "heading": "Got a freight job in mind?",
       "text": "Tell us what you are moving and we will give you a straight price."
+    },
+    "article": {
+      "published": "2026-07-07",
+      "readMinutes": 6,
+      "category": "Freight Basics"
     }
   },
   {
@@ -492,7 +512,7 @@ export const blogPosts: LandingPage[] = [
       "twitterDescription": null,
       "twitterImage": null,
       "jsonLd": [
-        "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"How to Choose a Freight Company in Brisbane\",\"description\":\"How to choose a freight company in Brisbane: the questions to ask about compliance, equipment, coverage and reliability before you book. Road Linx Transport.\",\"author\":{\"@type\":\"Organization\",\"name\":\"Road Linx Transport\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Road Linx Transport\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://roadlinxtransport.com.au/assets/img/roadlinx-logo.png\"}},\"mainEntityOfPage\":\"https://roadlinxtransport.com.au/blog/how-to-choose-freight-company-brisbane\"}"
+        "\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"How to Choose a Freight Company in Brisbane\",\n  \"description\": \"How to choose a freight company in Brisbane: the questions to ask about compliance, equipment, coverage and reliability before you book. Road Linx Transport.\",\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Road Linx Transport\",\n    \"url\": \"https://roadlinxtransport.com.au/\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Road Linx Transport\",\n    \"logo\": {\n      \"@type\": \"ImageObject\",\n      \"url\": \"https://roadlinxtransport.com.au/assets/img/roadlinx-logo.png\"\n    }\n  },\n  \"mainEntityOfPage\": \"https://roadlinxtransport.com.au/blog/how-to-choose-freight-company-brisbane\",\n  \"image\": \"https://roadlinxtransport.com.au/assets/img/service-img.jpg\",\n  \"datePublished\": \"2026-06-16\",\n  \"dateModified\": \"2026-06-16\"\n}\n"
       ]
     },
     "hero": {
@@ -592,6 +612,11 @@ export const blogPosts: LandingPage[] = [
     "cta": {
       "heading": "Got a freight job in mind?",
       "text": "Tell us what you are moving and we will give you a straight price."
+    },
+    "article": {
+      "published": "2026-06-16",
+      "readMinutes": 7,
+      "category": "Choosing a Carrier"
     }
   },
   {
@@ -610,7 +635,7 @@ export const blogPosts: LandingPage[] = [
       "twitterDescription": null,
       "twitterImage": null,
       "jsonLd": [
-        "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"NHVR Compliance & Load Restraint: A Shipper's Guide\",\"description\":\"An introduction to NHVR compliance and load restraint for businesses that send freight: what the rules cover and why load-rated equipment matters. Road Linx.\",\"author\":{\"@type\":\"Organization\",\"name\":\"Road Linx Transport\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Road Linx Transport\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://roadlinxtransport.com.au/assets/img/roadlinx-logo.png\"}},\"mainEntityOfPage\":\"https://roadlinxtransport.com.au/blog/nhvr-load-restraint-guide\"}"
+        "\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"NHVR Compliance & Load Restraint: A Shipper's Guide\",\n  \"description\": \"An introduction to NHVR compliance and load restraint for businesses that send freight: what the rules cover and why load-rated equipment matters. Road Linx.\",\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Road Linx Transport\",\n    \"url\": \"https://roadlinxtransport.com.au/\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Road Linx Transport\",\n    \"logo\": {\n      \"@type\": \"ImageObject\",\n      \"url\": \"https://roadlinxtransport.com.au/assets/img/roadlinx-logo.png\"\n    }\n  },\n  \"mainEntityOfPage\": \"https://roadlinxtransport.com.au/blog/nhvr-load-restraint-guide\",\n  \"image\": \"https://roadlinxtransport.com.au/assets/img/blog-img9.jpg\",\n  \"datePublished\": \"2026-06-30\",\n  \"dateModified\": \"2026-06-30\"\n}\n"
       ]
     },
     "hero": {
@@ -710,6 +735,11 @@ export const blogPosts: LandingPage[] = [
     "cta": {
       "heading": "Got a freight job in mind?",
       "text": "Tell us what you are moving and we will give you a straight price."
+    },
+    "article": {
+      "published": "2026-06-30",
+      "readMinutes": 7,
+      "category": "Compliance"
     }
   },
   {
@@ -728,7 +758,7 @@ export const blogPosts: LandingPage[] = [
       "twitterDescription": null,
       "twitterImage": null,
       "jsonLd": [
-        "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Tail-Lift Trucks: What They Are & When You Need One\",\"description\":\"What a tail-lift truck is, how tailgate delivery works, and when you need one for sites with no forklift. A practical guide from Road Linx Transport.\",\"author\":{\"@type\":\"Organization\",\"name\":\"Road Linx Transport\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Road Linx Transport\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://roadlinxtransport.com.au/assets/img/roadlinx-logo.png\"}},\"mainEntityOfPage\":\"https://roadlinxtransport.com.au/blog/tail-lift-truck-guide\"}"
+        "\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"Tail-Lift Trucks: What They Are & When You Need One\",\n  \"description\": \"What a tail-lift truck is, how tailgate delivery works, and when you need one for sites with no forklift. A practical guide from Road Linx Transport.\",\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Road Linx Transport\",\n    \"url\": \"https://roadlinxtransport.com.au/\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Road Linx Transport\",\n    \"logo\": {\n      \"@type\": \"ImageObject\",\n      \"url\": \"https://roadlinxtransport.com.au/assets/img/roadlinx-logo.png\"\n    }\n  },\n  \"mainEntityOfPage\": \"https://roadlinxtransport.com.au/blog/tail-lift-truck-guide\",\n  \"image\": \"https://roadlinxtransport.com.au/assets/img/blog-5.webp\",\n  \"datePublished\": \"2026-06-02\",\n  \"dateModified\": \"2026-06-02\"\n}\n"
       ]
     },
     "hero": {
@@ -828,6 +858,11 @@ export const blogPosts: LandingPage[] = [
     "cta": {
       "heading": "Got a freight job in mind?",
       "text": "Tell us what you are moving and we will give you a straight price."
+    },
+    "article": {
+      "published": "2026-06-02",
+      "readMinutes": 6,
+      "category": "Equipment"
     }
   },
   {
@@ -846,7 +881,7 @@ export const blogPosts: LandingPage[] = [
       "twitterDescription": null,
       "twitterImage": null,
       "jsonLd": [
-        "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Tautliner vs Curtainsider vs Flat Top: A Trailer Guide\",\"description\":\"A clear guide to trailer types: tautliners, curtainsiders, flat-tops and drop-decks, what each is for and how to pick the right one. Road Linx Transport.\",\"author\":{\"@type\":\"Organization\",\"name\":\"Road Linx Transport\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Road Linx Transport\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://roadlinxtransport.com.au/assets/img/roadlinx-logo.png\"}},\"mainEntityOfPage\":\"https://roadlinxtransport.com.au/blog/trailer-types-guide\"}"
+        "\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"Tautliner vs Curtainsider vs Flat Top: A Trailer Guide\",\n  \"description\": \"A clear guide to trailer types: tautliners, curtainsiders, flat-tops and drop-decks, what each is for and how to pick the right one. Road Linx Transport.\",\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Road Linx Transport\",\n    \"url\": \"https://roadlinxtransport.com.au/\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Road Linx Transport\",\n    \"logo\": {\n      \"@type\": \"ImageObject\",\n      \"url\": \"https://roadlinxtransport.com.au/assets/img/roadlinx-logo.png\"\n    }\n  },\n  \"mainEntityOfPage\": \"https://roadlinxtransport.com.au/blog/trailer-types-guide\",\n  \"image\": \"https://roadlinxtransport.com.au/assets/img/curtainsider-tautliner-img.jpg\",\n  \"datePublished\": \"2026-05-26\",\n  \"dateModified\": \"2026-05-26\"\n}\n"
       ]
     },
     "hero": {
@@ -946,6 +981,11 @@ export const blogPosts: LandingPage[] = [
     "cta": {
       "heading": "Got a freight job in mind?",
       "text": "Tell us what you are moving and we will give you a straight price."
+    },
+    "article": {
+      "published": "2026-05-26",
+      "readMinutes": 7,
+      "category": "Equipment"
     }
   },
   {
@@ -964,7 +1004,7 @@ export const blogPosts: LandingPage[] = [
       "twitterDescription": null,
       "twitterImage": null,
       "jsonLd": [
-        "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"What Is a Taxi Truck? (And When to Use One)\",\"description\":\"What a taxi truck is, how it differs from a courier, what it costs and when to use one for Brisbane freight. A plain guide from Road Linx Transport.\",\"author\":{\"@type\":\"Organization\",\"name\":\"Road Linx Transport\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Road Linx Transport\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://roadlinxtransport.com.au/assets/img/roadlinx-logo.png\"}},\"mainEntityOfPage\":\"https://roadlinxtransport.com.au/blog/what-is-a-taxi-truck\"}"
+        "\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"What Is a Taxi Truck? (And When to Use One)\",\n  \"description\": \"What a taxi truck is, how it differs from a courier, what it costs and when to use one for Brisbane freight. A plain guide from Road Linx Transport.\",\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Road Linx Transport\",\n    \"url\": \"https://roadlinxtransport.com.au/\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Road Linx Transport\",\n    \"logo\": {\n      \"@type\": \"ImageObject\",\n      \"url\": \"https://roadlinxtransport.com.au/assets/img/roadlinx-logo.png\"\n    }\n  },\n  \"mainEntityOfPage\": \"https://roadlinxtransport.com.au/blog/what-is-a-taxi-truck\",\n  \"image\": \"https://roadlinxtransport.com.au/assets/img/blog-img1.jpg\",\n  \"datePublished\": \"2026-05-05\",\n  \"dateModified\": \"2026-05-05\"\n}\n"
       ]
     },
     "hero": {
@@ -1064,6 +1104,11 @@ export const blogPosts: LandingPage[] = [
     "cta": {
       "heading": "Got a freight job in mind?",
       "text": "Tell us what you are moving and we will give you a straight price."
+    },
+    "article": {
+      "published": "2026-05-05",
+      "readMinutes": 6,
+      "category": "Freight Basics"
     }
   },
   {
@@ -1082,7 +1127,7 @@ export const blogPosts: LandingPage[] = [
       "twitterDescription": null,
       "twitterImage": null,
       "jsonLd": [
-        "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"What Is B2B Transport & Why It Protects Your Freight\",\"description\":\"What B2B transport is, how business-to-business freight works, and why cutting out depot handling protects your goods. A guide from Road Linx Transport.\",\"author\":{\"@type\":\"Organization\",\"name\":\"Road Linx Transport\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Road Linx Transport\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://roadlinxtransport.com.au/assets/img/roadlinx-logo.png\"}},\"mainEntityOfPage\":\"https://roadlinxtransport.com.au/blog/what-is-b2b-transport\"}"
+        "\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"What Is B2B Transport & Why It Protects Your Freight\",\n  \"description\": \"What B2B transport is, how business-to-business freight works, and why cutting out depot handling protects your goods. A guide from Road Linx Transport.\",\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Road Linx Transport\",\n    \"url\": \"https://roadlinxtransport.com.au/\"\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Road Linx Transport\",\n    \"logo\": {\n      \"@type\": \"ImageObject\",\n      \"url\": \"https://roadlinxtransport.com.au/assets/img/roadlinx-logo.png\"\n    }\n  },\n  \"mainEntityOfPage\": \"https://roadlinxtransport.com.au/blog/what-is-b2b-transport\",\n  \"image\": \"https://roadlinxtransport.com.au/assets/img/blog-img8.webp\",\n  \"datePublished\": \"2026-06-23\",\n  \"dateModified\": \"2026-06-23\"\n}\n"
       ]
     },
     "hero": {
@@ -1182,6 +1227,11 @@ export const blogPosts: LandingPage[] = [
     "cta": {
       "heading": "Got a freight job in mind?",
       "text": "Tell us what you are moving and we will give you a straight price."
+    },
+    "article": {
+      "published": "2026-06-23",
+      "readMinutes": 6,
+      "category": "Freight Basics"
     }
   }
 ];

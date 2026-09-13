@@ -24,6 +24,14 @@ export interface PageHead {
 
 export interface Crumb { label: string; href: string | null }
 
+/** Publication details for a blog post, shown on the page and used in its metadata. */
+export interface ArticleInfo {
+  /** ISO date, e.g. "2026-05-05". Keep the Article JSON-LD's datePublished in step. */
+  published: string;
+  readMinutes: number;
+  category: string;
+}
+
 export interface LandingPage {
   slug: string;
   head: PageHead;
@@ -40,4 +48,6 @@ export interface LandingPage {
   faq: { heading: string; items: { q: string; a: string }[] };
   related: { overline: string; heading: string; cards: { href: string; title: string }[] };
   cta: { heading: string; text: string };
+  /** Blog posts only. */
+  article?: ArticleInfo;
 }

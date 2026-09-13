@@ -17,8 +17,9 @@ import type { PageHead } from '@/content/types';
  */
 const isIndexable = (head: PageHead) => !/noindex/i.test(head.robots ?? '');
 
-const entry = (head: PageHead): MetadataRoute.Sitemap[number] => ({
+const entry = (head: PageHead, lastModified?: string): MetadataRoute.Sitemap[number] => ({
   url: canonicalOf(head),
+  ...(lastModified ? { lastModified } : {}),
 });
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -36,8 +37,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     staticPages.contact.head,
     ...locations.map((l) => l.head),
     ...services.map((s) => s.head),
-    ...blogPosts.map((p) => p.head),
   ];
 
-  return heads.filter(isIndexable).map(entry);
+  return [
+    ...heads.filter(isIndexable).map((head) => entry(head)),
+    ...blogPosts.filter((p) => isIndexable(p.head)).map((p) => entry(p.head, p.article?.published)),
+  ];
 }

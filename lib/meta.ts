@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import type { PageHead } from '@/content/types';
+import type { ArticleInfo, PageHead } from '@/content/types';
 import { correctUrl } from './corrections';
 
 /** The canonical/og:url a page actually ships, after lib/corrections. */
@@ -24,10 +24,11 @@ const DEFAULT_ROBOTS = 'index, follow, max-image-preview:large';
  *
  * Next replaces (not deep-merges) the openGraph/twitter objects when a page
  * defines them, so the site-wide og:site_name/type/locale and twitter:card
- * are re-stated here. Robots lives only here, not in the layout, so the 404
- * page isn't told to be indexed alongside Next's own noindex.
+ * are re-stated here; blog posts get og:type article instead. Robots lives
+ * only here, not in the layout, so the 404 page isn't told to be indexed
+ * alongside Next's own noindex.
  */
-export function pageMetadata(head: PageHead): Metadata {
+export function pageMetadata(head: PageHead, article?: ArticleInfo): Metadata {
   const literalUrls = hasTrailingSlashUrl(head);
   const ogUrl = ogUrlOf(head);
   return {
@@ -38,8 +39,10 @@ export function pageMetadata(head: PageHead): Metadata {
     ...(literalUrls ? {} : { alternates: { canonical: canonicalOf(head) } }),
     openGraph: {
       siteName: 'Road Linx Transport',
-      type: 'website',
       locale: 'en_AU',
+      ...(article
+        ? { type: 'article', publishedTime: article.published, authors: ['Road Linx Transport'] }
+        : { type: 'website' }),
       ...(head.ogTitle ? { title: head.ogTitle } : {}),
       ...(head.ogDescription ? { description: head.ogDescription } : {}),
       ...(ogUrl && !literalUrls ? { url: ogUrl } : {}),

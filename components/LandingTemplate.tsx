@@ -54,6 +54,9 @@ function faqJsonLd(items: LandingPage['faq']['items']): string {
   }).replace(/</g, '\\u003c');
 }
 
+const formatDate = (iso: string) =>
+  new Date(`${iso}T00:00:00`).toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric' });
+
 function HeroAction({ label, href }: { label: string; href: string }) {
   if (href.startsWith('tel:')) {
     return <a className="btn btn-onnavy-ghost btn-lg" href={href}>{label}</a>;
@@ -62,7 +65,7 @@ function HeroAction({ label, href }: { label: string; href: string }) {
 }
 
 export function LandingTemplate({ page, variant }: { page: LandingPage; variant: LandingVariant }) {
-  const { hero, faq, related, cta } = page;
+  const { hero, faq, related, cta, article } = page;
   return (
     <>
       <JsonLd blocks={[...page.head.jsonLd, faqJsonLd(faq.items)]} />
@@ -80,6 +83,11 @@ export function LandingTemplate({ page, variant }: { page: LandingPage; variant:
               </nav>
               <span className="overline" style={{ color: 'var(--orange-300)' }}>{hero.overline}</span>
               <h1>{hero.h1}</h1>
+              {article && (
+                <p className="ph-meta">
+                  {article.category} · <time dateTime={article.published}>{formatDate(article.published)}</time> · {article.readMinutes} min read
+                </p>
+              )}
               {hero.lead && <p className="ph-lead" dangerouslySetInnerHTML={{ __html: hero.lead }} />}
               <div className="ph-actions">
                 {hero.actions.map((a) => <HeroAction key={a.href} {...a} />)}
