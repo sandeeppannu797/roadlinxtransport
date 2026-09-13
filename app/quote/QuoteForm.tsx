@@ -3,10 +3,11 @@
 import { useActionState } from 'react';
 import { submitQuote } from './actions';
 import { EMPTY_FORM_STATE } from '@/lib/formState';
+import { FormError, FormSuccess, SubmitButton, useSuccessPanel } from '@/components/FormFeedback';
 
 /* Field set, labels, placeholders and select options are verbatim from
- * legacy quote.php. Status messages keep their legacy position: below the
- * form, success first. */
+ * legacy quote.php. The error keeps its legacy position below the form; on
+ * success the form is replaced by a confirmation panel. */
 const serviceOptions = [
   'General freight',
   'Full truck load (FTL)',
@@ -22,11 +23,24 @@ const serviceOptions = [
 
 export function QuoteForm() {
   const [state, formAction] = useActionState(submitQuote, EMPTY_FORM_STATE);
+  const { showSuccess, formRef, sendAnother } = useSuccessPanel(state);
   const kept = (name: string) => state.values?.[name] ?? '';
+
+  if (showSuccess) {
+    return (
+      <FormSuccess
+        title="Quote request sent"
+        message={state.success}
+        email={state.sentTo}
+        againLabel="Request another quote"
+        onAgain={sendAnother}
+      />
+    );
+  }
 
   return (
     <div>
-      <form className="card" action={formAction} style={{ padding: 'var(--space-7)' }}>
+      <form className="card" ref={formRef} action={formAction} style={{ padding: 'var(--space-7)' }}>
         <div className="form-grid">
           <div className="field"><label htmlFor="name">Your name</label><input id="name" name="name" type="text" required placeholder="Full name" defaultValue={kept('name')} /></div>
           <div className="field"><label htmlFor="company">Company</label><input id="company" name="company" type="text" placeholder="Business name" defaultValue={kept('company')} /></div>
@@ -46,21 +60,11 @@ export function QuoteForm() {
           <div className="field"><label htmlFor="when">When does it need to move?</label><input id="when" name="when" type="text" placeholder="e.g. Thursday AM" defaultValue={kept('when')} /></div>
         </div>
         <div className="field"><label htmlFor="notes">Anything else? (access, dock, forklift, urgency)</label><textarea id="notes" name="notes" placeholder="Tell us about site access, delivery windows or anything unusual about the load." defaultValue={kept('notes')} /></div>
-        <button className="btn btn-accent btn-lg btn-block" type="submit">Send quote request</button>
+        <SubmitButton pendingLabel="Sending…">Send quote request</SubmitButton>
         <p style={{ fontSize: 'var(--fs-caption)', color: 'var(--text-muted)', textAlign: 'center', margin: 'var(--space-3) 0 0' }}>Prefer to talk? Call <a href="tel:0731797072">07 3179 7072</a> — we answer the phone.</p>
       </form>
 
-      {state.success && (
-        <div role="status" style={{ background: '#e8f8ef', border: '1px solid #27ae60', color: '#1e8449', padding: 15, borderRadius: 8, marginBottom: 20 }}>
-          {state.success}
-        </div>
-      )}
-
-      {state.error && (
-        <div role="alert" style={{ background: '#fdeaea', border: '1px solid #e74c3c', color: '#c0392b', padding: 15, borderRadius: 8, marginBottom: 20 }}>
-          {state.error}
-        </div>
-      )}
+      {state.error && <FormError>{state.error}</FormError>}
     </div>
   );
 }

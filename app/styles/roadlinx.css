@@ -422,6 +422,54 @@ a.service-card:hover .more svg { transform: translateX(3px); }
 .field textarea { resize: vertical; min-height: 120px; }
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 var(--space-4); }
 
+/* Submit button while the action runs (components/FormFeedback.tsx) */
+.btn[aria-disabled="true"] { cursor: progress; opacity: 0.85; }
+.btn[aria-disabled="true"]:active { transform: none; }
+.btn-spinner {
+  width: 1em; height: 1em; flex-shrink: 0; border-radius: 50%;
+  border: 2px solid currentColor; border-right-color: transparent;
+  animation: btn-spin 0.7s linear infinite;
+}
+@keyframes btn-spin { to { transform: rotate(360deg); } }
+
+.form-alert {
+  display: flex; align-items: flex-start; gap: var(--space-3);
+  margin-bottom: var(--space-5); padding: var(--space-3) var(--space-4);
+  background: color-mix(in srgb, var(--color-danger) 7%, #fff);
+  border: 1px solid color-mix(in srgb, var(--color-danger) 30%, #fff);
+  border-left: 4px solid var(--color-danger); border-radius: var(--radius-sm);
+  color: var(--ink-900); font-size: var(--fs-small); font-weight: var(--fw-semibold);
+}
+.form-alert svg { width: 20px; height: 20px; flex-shrink: 0; color: var(--color-danger); }
+.form-alert span { padding-top: 1px; }
+
+/* Confirmation panel that replaces a form once it sends */
+.form-success {
+  padding: var(--space-8) var(--space-7); text-align: center;
+  border-top: 4px solid var(--color-success);
+  scroll-margin-top: calc(var(--header-h) + var(--space-4));
+  animation: form-success-in var(--dur-slow) var(--ease-out) both;
+}
+.form-success .fs-ic {
+  width: 64px; height: 64px; margin: 0 auto var(--space-4); border-radius: 999px;
+  display: grid; place-items: center; background: var(--euc-50); color: var(--color-success);
+}
+.form-success .fs-ic svg { width: 32px; height: 32px; }
+.form-success .fs-ic path { stroke-dasharray: 22; stroke-dashoffset: 22; animation: fs-check-draw var(--dur-slow) var(--ease-out) 160ms forwards; }
+.form-success h2 { font-size: var(--fs-h3); margin-bottom: var(--space-3); }
+.form-success h2:focus { outline: none; }
+.form-success .fs-lead { color: var(--text-body); font-size: var(--fs-body); max-width: 44ch; margin: 0 auto var(--space-3); }
+.form-success .fs-next { color: var(--text-muted); font-size: var(--fs-small); max-width: 48ch; margin: 0 auto; }
+.form-success .fs-email { color: var(--ink-900); overflow-wrap: anywhere; }
+.form-success .fs-actions { margin-top: var(--space-6); display: flex; justify-content: center; }
+@keyframes form-success-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes fs-check-draw { to { stroke-dashoffset: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .form-success, .form-success .fs-ic path { animation: none; stroke-dashoffset: 0; }
+  .btn-spinner { animation-duration: 1.6s; }
+}
+
 /* ---------------------------------------------------------------------
    13. Blog
    --------------------------------------------------------------------- */
