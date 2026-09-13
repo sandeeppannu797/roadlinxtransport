@@ -69,5 +69,5 @@ ${notes}
     return { error: ERR_SEND, success: '', values };
   }
 
-  return { error: '', success: 'Thank you! Your quote request has been sent successfully.' };
+  return { error: '', success: 'Thank you! Your quote request has been sent successfully.', sentTo: email };
 }

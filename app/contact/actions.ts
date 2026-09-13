@@ -51,5 +51,5 @@ ${message}
     return { error: ERR_SEND, success: '', values };
   }
 
-  return { error: '', success: 'Thank you! Your message has been sent successfully.' };
+  return { error: '', success: 'Thank you! Your message has been sent successfully.', sentTo: email };
 }

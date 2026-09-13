@@ -12,6 +12,8 @@ export interface FormState {
    * this is empty, which clears the form as the legacy pages did.
    */
   values?: Record<string, string>;
+  /** On success, the visitor's email, echoed in the confirmation panel. */
+  sentTo?: string;
 }
 
 export const EMPTY_FORM_STATE: FormState = { error: '', success: '' };
