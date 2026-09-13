@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "extract": "node scripts/extract-content.mjs",
-    "verify": "node scripts/verify-parity.mjs"
+    "verify": "node scripts/verify-seo.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

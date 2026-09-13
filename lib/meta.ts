@@ -1,10 +1,8 @@
 import type { Metadata } from 'next';
 import type { ArticleInfo, PageHead } from '@/content/types';
-import { correctUrl } from './corrections';
 
-/** The canonical/og:url a page actually ships, after lib/corrections. */
-export const canonicalOf = (head: PageHead): string => correctUrl(head.canonical);
-export const ogUrlOf = (head: PageHead): string | null => correctUrl(head.ogUrl);
+export const canonicalOf = (head: PageHead): string => head.canonical;
+export const ogUrlOf = (head: PageHead): string | null => head.ogUrl;
 
 /**
  * Next normalises metadata URLs against its trailingSlash setting, which
