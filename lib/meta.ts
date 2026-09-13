@@ -16,13 +16,16 @@ export function hasTrailingSlashUrl(head: PageHead): boolean {
   return canonicalOf(head).endsWith('/') || Boolean(ogUrlOf(head)?.endsWith('/'));
 }
 
+/** Robots directive for pages that don't set their own. */
+const DEFAULT_ROBOTS = 'index, follow, max-image-preview:large';
+
 /**
- * Converts an extracted legacy <head> record into Next metadata.
+ * Converts a page's <head> record into Next metadata.
  *
- * Next replaces (not deep-merges) the openGraph/twitter/robots objects when
- * a page defines them, so the site-wide values from legacy head.php
- * (og:site_name/type/locale, twitter:card, robots) are re-stated here to
- * keep every page's emitted tags identical to the legacy output.
+ * Next replaces (not deep-merges) the openGraph/twitter objects when a page
+ * defines them, so the site-wide og:site_name/type/locale and twitter:card
+ * are re-stated here. Robots lives only here, not in the layout, so the 404
+ * page isn't told to be indexed alongside Next's own noindex.
  */
 export function pageMetadata(head: PageHead): Metadata {
   const literalUrls = hasTrailingSlashUrl(head);
@@ -31,7 +34,7 @@ export function pageMetadata(head: PageHead): Metadata {
     title: head.title,
     description: head.description,
     ...(head.keywords ? { keywords: head.keywords } : {}),
-    ...(head.robots ? { robots: head.robots } : {}),
+    robots: head.robots ?? DEFAULT_ROBOTS,
     ...(literalUrls ? {} : { alternates: { canonical: canonicalOf(head) } }),
     openGraph: {
       siteName: 'Road Linx Transport',

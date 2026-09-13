@@ -279,7 +279,7 @@ a.card:hover, .card--hover:hover { transform: translateY(-3px); box-shadow: var(
   background: var(--orange-50); color: var(--orange-600); margin-bottom: var(--space-2);
 }
 .service-card .ic svg { width: 26px; height: 26px; }
-.service-card h3 { font-size: var(--fs-h4); font-family: var(--font-sans); font-weight: var(--fw-bold); color: var(--ink-900); }
+.service-card h3, .service-card .service-card-title { font-size: var(--fs-h4); font-family: var(--font-sans); font-weight: var(--fw-bold); color: var(--ink-900); }
 .service-card p { color: var(--text-muted); font-size: var(--fs-small); margin: 0; }
 .service-card .more { margin-top: auto; padding-top: var(--space-3); font-family: var(--font-sans); font-weight: var(--fw-bold); font-size: var(--fs-small); color: var(--navy-600); display: inline-flex; align-items: center; gap: 6px; }
 .service-card .more svg { width: 16px; height: 16px; transition: transform var(--dur-fast); }

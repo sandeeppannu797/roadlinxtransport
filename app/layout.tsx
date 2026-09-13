@@ -8,10 +8,14 @@ import { GA_ID, ORG_JSONLD, SITE_URL } from "@/lib/site";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-/* Site-wide head values, ported from legacy partials/head.php. */
+/*
+ * Site-wide head values. Robots is deliberately not set here: pageMetadata()
+ * sets it on every page, and leaving it off the layout keeps the 404 page
+ * down to the single noindex tag Next gives it. Icons come from the
+ * app/favicon.ico, app/icon.png and app/apple-icon.png file conventions.
+ */
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  robots: { index: true, follow: true, "max-image-preview": "large" },
   authors: [{ name: "Road Linx Transport" }],
   formatDetection: { telephone: false },
   verification: { google: "dMSRXvB9T16IeUh6aqKlybhi-aeGqoH79pWZy9n77pM" },
