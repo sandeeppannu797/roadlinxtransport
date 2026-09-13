@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { staticPages } from '@/content/pages';
 import { pageMetadata } from '@/lib/meta';
 import { JsonLd } from '@/components/JsonLd';
+import { ADDRESS, MAPS_URL } from '@/lib/site';
 import { ContactForm } from './ContactForm';
 
 /* Page chrome ported from legacy contact.php. */
@@ -47,15 +48,15 @@ export default function Contact() {
               <div className="aside-card">
                 <span className="overline">Road Linx Transport</span>
                 <h3>Business details</h3>
-                <div className="contact-row" style={{ borderTop: 'none' }}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span style={{ fontSize: 'var(--fs-small)' }}>Brisbane, Queensland</span></div>
+                <div className="contact-row" style={{ borderTop: 'none' }}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><a href={MAPS_URL} target="_blank" rel="noopener" style={{ fontSize: 'var(--fs-small)' }}>{ADDRESS.street}, {ADDRESS.suburb} {ADDRESS.state} {ADDRESS.postcode}</a></div>
                 <div className="contact-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span style={{ fontSize: 'var(--fs-small)' }}>7 days · after-hours available</span></div>
                 <div className="contact-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span style={{ fontSize: 'var(--fs-small)' }} className="mono">ABN 25 387 822 327</span></div>
                 <div className="contact-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1Z"/><path d="m9 12 2 2 4-4"/></svg><span style={{ fontSize: 'var(--fs-small)' }}>NHVR compliant · COR trained</span></div>
               </div>
               <div className="aside-card" style={{ marginTop: 'var(--space-5)', padding: 0, overflow: 'hidden' }}>
                 <iframe
-                  title="Road Linx Transport service area — Brisbane, Queensland"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d453481.7413141102!2d152.66354136203068!3d-27.381145764141067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b91579aac93d233%3A0x402a35af3deaf40!2sBrisbane%20QLD%2C%20Australia!5e0!3m2!1sen!2sin!4v1784014279330!5m2!1sen!2sin"
+                  title={`Map: Road Linx Transport, ${ADDRESS.street}, ${ADDRESS.suburb}`}
+                  src={`https://maps.google.com/maps?q=${encodeURIComponent(`Road Linx Transport, ${ADDRESS.street}, ${ADDRESS.suburb} ${ADDRESS.state} ${ADDRESS.postcode}`)}&z=14&hl=en&output=embed`}
                   height={400}
                   style={{ border: 0, width: '100%' }}
                   allowFullScreen

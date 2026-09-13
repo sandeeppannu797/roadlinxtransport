@@ -2,17 +2,16 @@
 
 import { useSyncExternalStore } from 'react';
 
-/* Legacy site.js filled the footer year in on the client so the copyright
- * could not go stale between deploys of a static site. Same here: the
- * prerendered HTML carries the year the legacy markup shipped with, and
- * the browser swaps in the real one. */
+/* The prerendered HTML carries the year the site was built; the browser
+ * swaps in the current one, so the copyright can't go stale between
+ * deploys. buildYear comes from the server so hydration matches. */
 const subscribe = () => () => {};
 
-export function FooterYear() {
+export function FooterYear({ buildYear }: { buildYear: number }) {
   const year = useSyncExternalStore(
     subscribe,
     () => String(new Date().getFullYear()),
-    () => '2026',
+    () => String(buildYear),
   );
   return <span data-year>{year}</span>;
 }
