@@ -22,6 +22,9 @@ export const ERR_REQUIRED = 'Please fill in all required fields.';
 export const ERR_EMAIL = 'Please enter a valid email address.';
 export const ERR_SEND = 'Sorry, something went wrong. Please try again.';
 
+/** Longest value kept from any field; the inputs' maxLength keeps people well under it. */
+const MAX_FIELD_LENGTH = 5000;
+
 /** Mirrors PHP FILTER_VALIDATE_EMAIL closely enough for form validation. */
 export function isValidEmail(value: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
@@ -29,5 +32,13 @@ export function isValidEmail(value: string): boolean {
 
 export function field(data: FormData, name: string): string {
   const value = data.get(name);
-  return typeof value === 'string' ? value.trim() : '';
+  return typeof value === 'string' ? value.trim().slice(0, MAX_FIELD_LENGTH) : '';
+}
+
+/** Name of the hidden field that people never see but form-filling bots do. */
+export const HONEYPOT_FIELD = 'website';
+
+/** True when the honeypot was filled in: a bot, so the message is dropped. */
+export function isBot(data: FormData): boolean {
+  return field(data, HONEYPOT_FIELD) !== '';
 }

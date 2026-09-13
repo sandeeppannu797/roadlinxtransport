@@ -444,16 +444,35 @@ a.service-card:hover .more svg { transform: translateX(3px); }
 /* ---------------------------------------------------------------------
    12. Forms
    --------------------------------------------------------------------- */
-.field { display: flex; flex-direction: column; gap: 6px; margin-bottom: var(--space-4); }
-.field label { font-family: var(--font-sans); font-weight: var(--fw-semibold); font-size: var(--fs-small); color: var(--ink-800); }
-.field input, .field select, .field textarea {
-  font: var(--type-body); color: var(--ink-900); background: #fff;
-  border: 1px solid var(--border-input); border-radius: var(--radius-sm);
-  padding: 0.7em 0.85em; width: 100%; transition: border-color var(--dur-fast), box-shadow var(--dur-fast);
+.form-card { padding: var(--space-6); }
+.field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 0.875rem; }
+.field label {
+  display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-2);
+  font-family: var(--font-sans); font-weight: var(--fw-semibold); font-size: var(--fs-small); color: var(--ink-900);
 }
+.field .optional { font-weight: var(--fw-regular); font-size: var(--fs-caption); color: var(--text-muted); }
+/* 16px text: large enough that iOS Safari doesn't zoom in on focus. */
+.field input, .field select, .field textarea {
+  font-family: var(--font-sans); font-size: 1rem; line-height: 1.4; color: var(--ink-900); background: #fff;
+  border: 1px solid var(--border-input); border-radius: var(--radius-sm);
+  padding: 0.6em 0.8em; width: 100%; transition: border-color var(--dur-fast), box-shadow var(--dur-fast);
+}
+/* Hints sit well below the labels in weight, so the labels lead. */
+.field input::placeholder, .field textarea::placeholder { color: var(--ink-400); opacity: 1; }
+.field select {
+  appearance: none; cursor: pointer; padding-right: 2.4em;
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235E6B79' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 0.8em center / 16px;
+}
+.field input:hover, .field select:hover, .field textarea:hover { border-color: var(--ink-300); }
 .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--orange-400); box-shadow: var(--focus-ring); }
-.field textarea { resize: vertical; min-height: 120px; }
+/* Flags a bad value once the visitor has typed and moved on, not before. */
+.field input:user-invalid, .field textarea:user-invalid { border-color: var(--color-danger); }
+.field textarea { resize: vertical; min-height: 88px; }
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 var(--space-4); }
+
+/* Spam honeypot: off-screen for people, still in the form for bots. */
+.hp-field { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.form-note { font-size: var(--fs-caption); line-height: 1.5; color: var(--text-muted); text-align: center; margin: var(--space-3) 0 0; }
 
 /* Submit button while the action runs (components/FormFeedback.tsx) */
 .btn[aria-disabled="true"] { cursor: progress; opacity: 0.85; }
@@ -621,6 +640,7 @@ aspect-ratio: 4/3.4; box-shadow: var(--shadow-md); }
   .section { padding-block: var(--space-8); }
   .stat-band { grid-template-columns: repeat(2, 1fr); }
   .form-grid, .grid-box { grid-template-columns: 1fr; }
+  .form-card { padding: var(--space-5); }
   .footer-grid { grid-template-columns: 1fr; }
   .site-topbar .topbar-left .tb-item.hide-sm { display: none; }
   .cta-band .cta-inner { flex-direction: column; align-items: flex-start; }

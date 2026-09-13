@@ -3,12 +3,17 @@
 import { quoteEmailHtml } from '@/lib/emailTemplates';
 import { sendMail } from '@/lib/mailer';
 import {
-  ERR_EMAIL, ERR_REQUIRED, ERR_SEND, field, isValidEmail, type FormState,
+  ERR_EMAIL, ERR_REQUIRED, ERR_SEND, field, isBot, isValidEmail, type FormState,
 } from '@/lib/formState';
+
+const SUCCESS = 'Thank you! Your quote request has been sent successfully.';
 
 /* Port of the quote.php handler: same required fields, same validation
  * order, same subject and body layout, same user-facing messages. */
 export async function submitQuote(_prev: FormState, data: FormData): Promise<FormState> {
+  // Bots get the normal success message, so they have nothing to adapt to.
+  if (isBot(data)) return { error: '', success: SUCCESS };
+
   const name = field(data, 'name');
   const company = field(data, 'company');
   const email = field(data, 'email');
@@ -69,5 +74,5 @@ ${notes}
     return { error: ERR_SEND, success: '', values };
   }
 
-  return { error: '', success: 'Thank you! Your quote request has been sent successfully.', sentTo: email };
+  return { error: '', success: SUCCESS, sentTo: email };
 }

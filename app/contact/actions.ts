@@ -3,12 +3,17 @@
 import { contactEmailHtml } from '@/lib/emailTemplates';
 import { sendMail } from '@/lib/mailer';
 import {
-  ERR_EMAIL, ERR_REQUIRED, ERR_SEND, field, isValidEmail, type FormState,
+  ERR_EMAIL, ERR_REQUIRED, ERR_SEND, field, isBot, isValidEmail, type FormState,
 } from '@/lib/formState';
+
+const SUCCESS = 'Thank you! Your message has been sent successfully.';
 
 /* Port of the contact.php handler: name/email/message required (phone
  * optional), same subject and body layout, same user-facing messages. */
 export async function submitContact(_prev: FormState, data: FormData): Promise<FormState> {
+  // Bots get the normal success message, so they have nothing to adapt to.
+  if (isBot(data)) return { error: '', success: SUCCESS };
+
   const name = field(data, 'name');
   const phone = field(data, 'phone');
   const email = field(data, 'email');
@@ -51,5 +56,5 @@ ${message}
     return { error: ERR_SEND, success: '', values };
   }
 
-  return { error: '', success: 'Thank you! Your message has been sent successfully.', sentTo: email };
+  return { error: '', success: SUCCESS, sentTo: email };
 }
