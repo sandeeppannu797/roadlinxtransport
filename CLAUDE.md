@@ -130,10 +130,15 @@ og:url pointing at `/policies-compliance`, a URL that has never existed.
   strip; `components/LiteralUrlTags.tsx` emits those two tags literally instead.
 - `ORG_JSONLD` in `lib/site.ts` is byte-for-byte from legacy `head.php` and is
   on every page; verify compares it too.
-- Forms are server actions plus Nodemailer (`app/quote`, `app/contact`), sending
-  to the same addresses and body layout as the legacy `mail()` calls. SMTP creds
-  come from env — see `.env.example`. Without them the forms show the legacy
-  "Sorry, something went wrong" message and log the failure.
+- Forms are server actions plus Resend (`app/quote`, `app/contact`,
+  `lib/mailer.ts`), with the same subjects and body layout as the legacy
+  `mail()` calls. The recipient (`admin@`, not legacy `info@`) and sender
+  (`noreply@mail.` subdomain) differ from legacy on purpose: `info@` does not
+  exist in the Microsoft 365 tenant, and M365 has SMTP AUTH off. Don't revert
+  them to match legacy. `RESEND_API_KEY` comes from env — see `.env.example`.
+  Without it, or before `mail.roadlinxtransport.com.au` is verified in Resend,
+  the forms show the legacy "Sorry, something went wrong" message and log the
+  failure. Resend's SDK returns errors instead of throwing; `sendMail` rethrows.
 - `/sitemap.xml` and `/robots.txt` are generated from the content collections
   and filter out `noindex` pages (49 of 50 URLs). The legacy site had neither.
 

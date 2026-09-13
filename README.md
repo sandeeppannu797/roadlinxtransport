@@ -54,15 +54,38 @@ pnpm build && pnpm start
 pnpm verify
 ```
 
-## Forms
+## Forms and mail setup
 
 `/quote` and `/contact` post to server actions (`app/*/actions.ts`) that send
-mail through Nodemailer, replacing the legacy `mail()` calls. Recipients,
-sender, subjects and body layout are unchanged: both go to
-`info@roadlinxtransport.com.au` from `admin@roadlinxtransport.com.au` with the
-submitter as Reply-To. Copy `.env.example` to `.env.local` and fill in the
-SMTP credentials — without them the forms show the legacy
-"Sorry, something went wrong" message and log the failure.
+mail through [Resend](https://resend.com) via `lib/mailer.ts`, replacing the
+legacy `mail()` calls. Subjects and body layout are unchanged. Both forms send
+to `admin@roadlinxtransport.com.au` from
+`noreply@mail.roadlinxtransport.com.au`, with the submitter as Reply-To.
+
+Two things differ from legacy on purpose:
+
+- **Recipient.** Legacy sent to `info@`, which is not a mailbox in the
+  business's Microsoft 365 tenant, so every submission would bounce.
+- **Transport and sender.** Microsoft 365 disables SMTP AUTH on new tenants,
+  so mail goes through Resend instead. It sends from the `mail.` subdomain so
+  the apex domain's sending reputation stays tied to Microsoft 365 only.
+
+Neither is visible to search engines or checked by `pnpm verify`, so they are
+not in `lib/corrections.ts`.
+
+Before the forms will send:
+
+1. **`mail.roadlinxtransport.com.au` must be verified in Resend.** Add it as a
+   domain in the Resend dashboard, publish the DNS records Resend shows for
+   it, and wait for the domain to show as Verified. Until then, Resend rejects
+   every send.
+2. **`RESEND_API_KEY` must be set in the Vercel project environment**
+   (Production, plus Preview if you want forms to work on preview deploys).
+   Use a sending-only key restricted to that domain. For local development,
+   copy `.env.example` to `.env.local` and set it there. Never commit the key.
+
+If the key is missing or Resend rejects a message, the forms show the legacy
+"Sorry, something went wrong" message and log the error server-side.
 
 ## Sitemap and robots
 
