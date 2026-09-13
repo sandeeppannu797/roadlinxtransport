@@ -43,7 +43,7 @@ export const blogPosts: LandingPage[] = [
       "h1": "22 vs 24 Pallet Trailers: Which Semi Suits Your Load?",
       "lead": null,
       "media": {
-        "html": "<img src=\"/assets/img/blog-img6.webp\">",
+        "html": "<img src=\"/assets/img/blog-img6.webp\" alt=\"A 22-pallet and a 24-pallet semi-trailer parked side by side\">",
         "style": "aspect-ratio:unset;"
       },
       "actions": [
@@ -162,7 +162,7 @@ export const blogPosts: LandingPage[] = [
       "h1": "Chain of Responsibility (COR) Explained for Shippers",
       "lead": null,
       "media": {
-        "html": "<img src=\"/assets/img/blog-img3.webp\">",
+        "html": "<img src=\"/assets/img/blog-img3.webp\" alt=\"Diagram of the Chain of Responsibility, from consignor through to receiver\">",
         "style": "aspect-ratio: unset;"
       },
       "actions": [
@@ -281,7 +281,7 @@ export const blogPosts: LandingPage[] = [
       "h1": "FTL vs LTL: Choosing Full Truck Load Freight",
       "lead": null,
       "media": {
-        "html": "<img src=\"/assets/img/blog-img2.webp\">",
+        "html": "<img src=\"/assets/img/blog-img2.webp\" alt=\"Diagram comparing full truck load (FTL) and less-than-truckload (LTL) freight\">",
         "style": "aspect-ratio:unset;"
       },
       "actions": [
@@ -400,7 +400,7 @@ export const blogPosts: LandingPage[] = [
       "h1": "Hot Shot Freight: Getting Urgent Deliveries Right",
       "lead": null,
       "media": {
-        "html": "<img src=\"/assets/img/blog-img10.jpg\">",
+        "html": "<img src=\"/assets/img/blog-img10.jpg\" alt=\"Van driving through the city on an urgent delivery\">",
         "style": "aspect-ratio: unset;"
       },
       "actions": [
@@ -519,7 +519,7 @@ export const blogPosts: LandingPage[] = [
       "h1": "How to Choose a Freight Company in Brisbane",
       "lead": null,
       "media": {
-        "html": "<div class=\"img-ph\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M14 18V6a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h1\"></path><path d=\"M14 9h4l3 3v5a1 1 0 0 1-1 1h-1\"></path><circle cx=\"7\" cy=\"18\" r=\"2\"></circle><circle cx=\"17\" cy=\"18\" r=\"2\"></circle></svg>Photo — Business owner choosing a Brisbane freight company</div>",
+        "html": "<img src=\"/assets/img/service-img.jpg\" alt=\"Row of prime movers parked at a transport depot\">",
         "style": null
       },
       "actions": [
@@ -638,7 +638,7 @@ export const blogPosts: LandingPage[] = [
       "h1": "NHVR Compliance & Load Restraint: A Shipper's Guide",
       "lead": null,
       "media": {
-        "html": "<img src=\"/assets/img/blog-img9.jpg\">",
+        "html": "<img src=\"/assets/img/blog-img9.jpg\" alt=\"Gloved hand tensioning a ratchet strap over palletised freight\">",
         "style": "aspect-ratio: unset;"
       },
       "actions": [
@@ -757,7 +757,7 @@ export const blogPosts: LandingPage[] = [
       "h1": "Tail-Lift Trucks: What They Are & When You Need One",
       "lead": null,
       "media": {
-        "html": "<img src=\"/assets/img/blog-5.webp\">",
+        "html": "<img src=\"/assets/img/blog-5.webp\" alt=\"Tail-lift platform lowering a pallet of stock to the ground\">",
         "style": "aspect-ratio:unset;"
       },
       "actions": [
@@ -876,7 +876,7 @@ export const blogPosts: LandingPage[] = [
       "h1": "Tautliner vs Curtainsider vs Flat Top: A Trailer Guide",
       "lead": null,
       "media": {
-        "html": "<div class=\"img-ph\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M14 18V6a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h1\"></path><path d=\"M14 9h4l3 3v5a1 1 0 0 1-1 1h-1\"></path><circle cx=\"7\" cy=\"18\" r=\"2\"></circle><circle cx=\"17\" cy=\"18\" r=\"2\"></circle></svg>Photo — Tautliner with curtains open for side loading</div>",
+        "html": "<img src=\"/assets/img/curtainsider-tautliner-img.jpg\" alt=\"Forklift side-loading a tautliner with its curtains open\">",
         "style": null
       },
       "actions": [
@@ -995,7 +995,7 @@ export const blogPosts: LandingPage[] = [
       "h1": "What Is a Taxi Truck? (And When to Use One)",
       "lead": null,
       "media": {
-        "html": "<img src=\"/assets/img/blog-img1.jpg\">",
+        "html": "<img src=\"/assets/img/blog-img1.jpg\" alt=\"Driver moving a pallet off a taxi truck’s tail lift with a pallet jack\">",
         "style": "aspect-ratio:unset;"
       },
       "actions": [
@@ -1114,7 +1114,7 @@ export const blogPosts: LandingPage[] = [
       "h1": "What Is B2B Transport & Why It Protects Your Freight",
       "lead": null,
       "media": {
-        "html": "<img src=\"/assets/img/blog-img8.webp\">",
+        "html": "<img src=\"/assets/img/blog-img8.webp\" alt=\"Palletised stock being loaded onto a tautliner at a warehouse dock\">",
         "style": "aspect-ratio: unset;"
       },
       "actions": [

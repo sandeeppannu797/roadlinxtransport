@@ -47,7 +47,7 @@ export const services: LandingPage[] = [
       h1: "After-Hours & Time-Slot Deliveries in Brisbane",
       lead: null,
       media: {
-        html: '<img src="/assets/img/after-hours-time-slot-img.jpg">',
+        html: '<img src="/assets/img/after-hours-time-slot-img.jpg" alt="Rigid truck unloading at a warehouse roller door at dusk">',
         style: null,
       },
       actions: [
@@ -186,7 +186,7 @@ export const services: LandingPage[] = [
       h1: "B2B Transport in Brisbane",
       lead: null,
       media: {
-        html: '<img src="/assets/img/b2b-transport-img.jpg">',
+        html: '<img src="/assets/img/b2b-transport-img.jpg" alt="Forklift loading a tautliner at a warehouse loading dock">',
         style: null,
       },
       actions: [
@@ -325,7 +325,7 @@ export const services: LandingPage[] = [
       h1: "Curtainsider & Tautliner Hire in Brisbane",
       lead: null,
       media: {
-        html: '<img src="/assets/img/curtainsider-tautliner-img.jpg">',
+        html: '<img src="/assets/img/curtainsider-tautliner-img.jpg" alt="Forklift side-loading a tautliner with its curtains open">',
         style: null,
       },
       actions: [
@@ -465,7 +465,7 @@ export const services: LandingPage[] = [
       h1: "Distribution Solutions in Brisbane",
       lead: null,
       media: {
-        html: '<img src="/assets/img/distribution-solution-img.jpg">',
+        html: '<img src="/assets/img/distribution-solution-img.jpg" alt="Curtain-sided rigid truck making a delivery to a shopping strip">',
         style: null,
       },
       actions: [
@@ -605,7 +605,7 @@ export const services: LandingPage[] = [
       h1: "Flatbed & Drop-Deck Transport in Brisbane",
       lead: null,
       media: {
-        html: '<img src="/assets/img/flatbed-drop-deck-img.jpg">',
+        html: '<img src="/assets/img/flatbed-drop-deck-img.jpg" alt="Prime mover with a flat-top trailer loaded with steel">',
         style: null,
       },
       actions: [
@@ -744,7 +744,7 @@ export const services: LandingPage[] = [
       h1: "Full Truck Load (FTL) Services",
       lead: null,
       media: {
-        html: '<img src="/assets/img/full-truck-load-img.jpg">',
+        html: '<img src="/assets/img/full-truck-load-img.jpg" alt="Prime mover towing a tautliner fully loaded with pallets">',
         style: null,
       },
       actions: [
@@ -876,7 +876,7 @@ export const services: LandingPage[] = [
       h1: "General Freight Transport in Brisbane",
       lead: null,
       media: {
-        html: '<img src="/assets/img/general-freight-img.jpg">',
+        html: '<img src="/assets/img/general-freight-img.jpg" alt="Tautliner loaded with palletised freight at a warehouse">',
         style: null,
       },
       actions: [
@@ -1008,7 +1008,7 @@ export const services: LandingPage[] = [
       h1: "Hot Shot & Same-Day Freight in Brisbane",
       lead: null,
       media: {
-        html: '<img src="/assets/img/hot-shot-same-img.jpg">',
+        html: '<img src="/assets/img/hot-shot-same-img.jpg" alt="Van on a city street for a same-day delivery">',
         style: null,
       },
       actions: [
@@ -1140,7 +1140,7 @@ export const services: LandingPage[] = [
       h1: "Interstate & Northern NSW Freight",
       lead: null,
       media: {
-        html: '<img src="/assets/img/interstate-northern-nsw-img.jpg">',
+        html: '<img src="/assets/img/interstate-northern-nsw-img.jpg" alt="Prime mover and semi-trailer on an open highway">',
         style: null,
       },
       actions: [
@@ -1420,7 +1420,7 @@ export const services: LandingPage[] = [
       h1: "Relief Driver & Permanent Truck Hire in Brisbane",
       lead: null,
       media: {
-        html: '<img src="/assets/img/hire-relief-driver-img.jpg">',
+        html: '<img src="/assets/img/hire-relief-driver-img.jpg" alt="Driver in hi-vis standing beside a flat-top rigid truck">',
         style: null,
       },
       actions: [
@@ -1560,7 +1560,7 @@ export const services: LandingPage[] = [
       h1: "Semi-Trailer Hire in Brisbane",
       lead: null,
       media: {
-        html: '<img src="/assets/img/semi-trailer-hire-img.jpg">',
+        html: '<img src="/assets/img/semi-trailer-hire-img.jpg" alt="Prime mover and semi-trailer at a depot">',
         style: null,
       },
       actions: [
@@ -1700,7 +1700,7 @@ export const services: LandingPage[] = [
       h1: "Tail-Lift & Tailgate Delivery in Brisbane",
       lead: null,
       media: {
-        html: '<img src="/assets/img/tail-lift-img.jpg">',
+        html: '<img src="/assets/img/tail-lift-img.jpg" alt="Driver lowering a pallet on a rigid truck’s tail lift">',
         style: null,
       },
       actions: [
@@ -1831,7 +1831,7 @@ export const services: LandingPage[] = [
       h1: "Taxi Truck Hire in Brisbane",
       lead: null,
       media: {
-        html: '<img src="/assets/img/taxi-truck-img.jpg">',
+        html: '<img src="/assets/img/taxi-truck-img.jpg" alt="Driver unloading a pallet from a curtain-sided rigid truck">',
         style: null,
       },
       actions: [
@@ -1971,7 +1971,7 @@ export const services: LandingPage[] = [
       h1: "Warehouse Relocations in Brisbane",
       lead: null,
       media: {
-        html: '<img src="/assets/img/warehouse-relocation-img.jpg">',
+        html: '<img src="/assets/img/warehouse-relocation-img.jpg" alt="Two tautliners loading at warehouse docks">',
         style: null,
       },
       actions: [

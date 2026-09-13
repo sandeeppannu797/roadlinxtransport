@@ -44,7 +44,7 @@ export const locations: LandingPage[] = [
       "h1": "Freight & Transport Services in Ballina",
       "lead": null,
       "media": {
-        "html": "<img src=\"/assets/img/location-img14.jpg\">",
+        "html": "<img src=\"/assets/img/location-img14.jpg\" alt=\"Semi-trailer passing the Ballina town sign\">",
         "style": null
       },
       "actions": [
@@ -184,7 +184,7 @@ export const locations: LandingPage[] = [
       "h1": "Freight & Transport Services in Brisbane",
       "lead": null,
       "media": {
-        "html": "<img src=\"/assets/img/location-img1.jpg\">",
+        "html": "<img src=\"/assets/img/location-img1.jpg\" alt=\"Prime mover and semi-trailer outside a Brisbane warehouse\">",
         "style": null
       },
       "actions": [
@@ -324,7 +324,7 @@ export const locations: LandingPage[] = [
       "h1": "Freight & Transport Services in Bundaberg",
       "lead": null,
       "media": {
-        "html": "<img src=\"/assets/img/location-img8.jpg\">",
+        "html": "<img src=\"/assets/img/location-img8.jpg\" alt=\"Semi-trailer beside cane fields and a sugar mill near Bundaberg\">",
         "style": null
       },
       "actions": [
@@ -464,7 +464,7 @@ export const locations: LandingPage[] = [
       "h1": "Freight & Transport Services in Chinchilla",
       "lead": null,
       "media": {
-        "html": "<img src=\"/assets/img/location-img11.jpg\">",
+        "html": "<img src=\"/assets/img/location-img11.jpg\" alt=\"Semi-trailer on a road near an industrial plant outside Chinchilla\">",
         "style": null
       },
       "actions": [
@@ -604,7 +604,7 @@ export const locations: LandingPage[] = [
       "h1": "Freight & Transport Services in Dalby",
       "lead": null,
       "media": {
-        "html": "<img src=\"/assets/img/location-img10.jpg\">",
+        "html": "<img src=\"/assets/img/location-img10.jpg\" alt=\"Semi-trailer passing grain silos near Dalby on the Western Downs\">",
         "style": null
       },
       "actions": [
@@ -744,7 +744,7 @@ export const locations: LandingPage[] = [
       "h1": "Freight & Transport Services on the Gold Coast",
       "lead": null,
       "media": {
-        "html": "<img src=\"/assets/img/location-img3.jpg\">",
+        "html": "<img src=\"/assets/img/location-img3.jpg\" alt=\"Semi-trailer at a Gold Coast enterprise estate\">",
         "style": null
       },
       "actions": [
@@ -884,7 +884,7 @@ export const locations: LandingPage[] = [
       "h1": "Freight & Transport Services in Hervey Bay",
       "lead": null,
       "media": {
-        "html": "<img src=\"/assets/img/location-img7.jpg\">",
+        "html": "<img src=\"/assets/img/location-img7.jpg\" alt=\"Semi-trailer on a palm-lined road in Hervey Bay\">",
         "style": null
       },
       "actions": [
@@ -1024,7 +1024,7 @@ export const locations: LandingPage[] = [
       "h1": "Freight & Transport Services in Lismore",
       "lead": null,
       "media": {
-        "html": "<img src=\"/assets/img/location-img15.jpg\">",
+        "html": "<img src=\"/assets/img/location-img15.jpg\" alt=\"Flat-top semi-trailer loaded with timber near Lismore\">",
         "style": null
       },
       "actions": [
@@ -1164,7 +1164,7 @@ export const locations: LandingPage[] = [
       "h1": "Freight & Transport Services in Maryborough",
       "lead": null,
       "media": {
-        "html": "<img src=\"/assets/img/location-img6.jpg\">",
+        "html": "<img src=\"/assets/img/location-img6.jpg\" alt=\"Semi-trailer outside an industrial site in Maryborough\">",
         "style": null
       },
       "actions": [
@@ -1304,7 +1304,7 @@ export const locations: LandingPage[] = [
       "h1": "Freight & Transport Across Northern NSW",
       "lead": null,
       "media": {
-        "html": "<img src=\"/assets/img/location-img12.jpg\">",
+        "html": "<img src=\"/assets/img/location-img12.jpg\" alt=\"Semi-trailer on a highway in Northern NSW\">",
         "style": null
       },
       "actions": [
@@ -1444,7 +1444,7 @@ export const locations: LandingPage[] = [
       "h1": "Freight & Transport Services in Oakey",
       "lead": null,
       "media": {
-        "html": "<img src=\"/assets/img/location-img9.jpg\">",
+        "html": "<img src=\"/assets/img/location-img9.jpg\" alt=\"Semi-trailer beside a grain silo near Oakey on the Darling Downs\">",
         "style": null
       },
       "actions": [
@@ -1584,7 +1584,7 @@ export const locations: LandingPage[] = [
       "h1": "Port of Brisbane Transport & Cartage",
       "lead": null,
       "media": {
-        "html": "<img src=\"/assets/img/location-img2.jpg\">",
+        "html": "<img src=\"/assets/img/location-img2.jpg\" alt=\"Prime mover carting a shipping container at the Port of Brisbane\">",
         "style": null
       },
       "actions": [
@@ -1724,7 +1724,7 @@ export const locations: LandingPage[] = [
       "h1": "Freight & Transport Services on the Sunshine Coast",
       "lead": null,
       "media": {
-        "html": "<img src=\"/assets/img/location-img4.jpg\">",
+        "html": "<img src=\"/assets/img/location-img4.jpg\" alt=\"Semi-trailer at a Sunshine Coast business park\">",
         "style": null
       },
       "actions": [
@@ -1864,7 +1864,7 @@ export const locations: LandingPage[] = [
       "h1": "Freight & Transport Services in Toowoomba",
       "lead": null,
       "media": {
-        "html": "<img src=\"/assets/img/location-img5.jpg\">",
+        "html": "<img src=\"/assets/img/location-img5.jpg\" alt=\"Semi-trailer on the winding range road up to Toowoomba\">",
         "style": null
       },
       "actions": [
@@ -2004,7 +2004,7 @@ export const locations: LandingPage[] = [
       "h1": "Freight & Transport Services in Tweed Heads",
       "lead": null,
       "media": {
-        "html": "<img src=\"/assets/img/location-img13.jpg\">",
+        "html": "<img src=\"/assets/img/location-img13.jpg\" alt=\"Semi-trailer on a coastal road at Tweed Heads\">",
         "style": null
       },
       "actions": [
