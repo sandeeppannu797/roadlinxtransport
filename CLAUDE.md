@@ -124,7 +124,9 @@ checks in `verify-seo.mjs`.
 - Forms are server actions plus Resend (`app/quote`, `app/contact`,
   `lib/mailer.ts`), with the legacy plain-text body, subjects led by 🚚, plus an HTML
   version from `lib/emailTemplates.ts` (table layout, inline styles, all
-  submitted values escaped). The recipient (`admin@`, not legacy `info@`) and
+  submitted values escaped). The email logo is its own opaque white-badge
+  copy, `public/assets/img/email/roadlinx-logo-email.png`: the site logo is
+  transparent and its navy lettering vanishes on the email's navy header. The recipient (`admin@`, not legacy `info@`) and
   sender (`noreply@mail.` subdomain) are deliberate: `info@` does not exist in
   the Microsoft 365 tenant, and M365 has SMTP AUTH off. `RESEND_API_KEY` comes
   from env — see `.env.example`. Without it, or before
