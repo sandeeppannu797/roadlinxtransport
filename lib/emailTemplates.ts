@@ -21,7 +21,10 @@ const TINT = '#F6F8FA';
 const PAGE = '#F1F3F6';
 const FONT = "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif";
 
-const LOGO_URL = `${SITE_URL}/assets/img/roadlinx-logo.png`;
+// Not the site logo: that PNG is transparent, and its navy lettering vanishes
+// on the navy header. This copy has the white badge baked into the pixels,
+// since Gmail's dark mode recolours backgrounds but never image content.
+const LOGO_URL = `${SITE_URL}/assets/img/email/roadlinx-logo-email.png`;
 const SITE_LABEL = 'roadlinxtransport.com.au';
 
 function esc(value: string): string {
@@ -152,7 +155,7 @@ function layout(o: {
 <tr><td align="center" style="padding:24px 12px;">
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="width:100%;max-width:600px;background:#FFFFFF;border-radius:10px;">
 <tr><td align="center" bgcolor="${NAVY}" style="padding:28px 24px 22px;background:${NAVY};border-radius:10px 10px 0 0;">
-<a href="${SITE_URL}/" style="text-decoration:none;"><img src="${LOGO_URL}" width="144" height="72" alt="ROAD LINX TRANSPORT" style="display:block;margin:0 auto;width:144px;height:72px;border:0;outline:none;${textStyle(16, 20, 700, '#FFFFFF')}"></a>
+<a href="${SITE_URL}/" style="text-decoration:none;"><img src="${LOGO_URL}" width="160" height="80" alt="ROAD LINX TRANSPORT" style="display:block;margin:0 auto;width:160px;height:80px;border:0;outline:none;${textStyle(16, 20, 700, '#FFFFFF')}"></a>
 <p class="rl-tagline" style="margin:16px 0 0;${textStyle(12, 16, 500, '#C5CFDA')}letter-spacing:3px;">BRISBANE &middot; SE QLD &middot; NORTHERN NSW</p>
 </td></tr>
 <tr><td height="6" bgcolor="${ORANGE}" style="height:6px;background:${ORANGE};font-size:0;line-height:0;">&nbsp;</td></tr>
