@@ -96,6 +96,7 @@ export function Footer() {
           <p>© <FooterYear buildYear={new Date().getFullYear()} /> Road Linx Transport · ABN 25 387 822 327 · All rights reserved.</p>
           <nav className="fb-links" aria-label="Company">
             {footerCompany.map((l) => <Link key={l.href} href={l.href}>{l.label}</Link>)}
+            <a href="/documents/terms-and-conditions.pdf" target="_blank" rel="noopener">Terms &amp; conditions</a>
           </nav>
         </div>
       </div>
